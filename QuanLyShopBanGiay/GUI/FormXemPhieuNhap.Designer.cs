@@ -1,6 +1,6 @@
 ﻿namespace QuanLyShopBanGiay.GUI
 {
-    partial class FormXemPhieuNhap
+    partial class formXemPhieuNhap
     {
         /// <summary>
         /// Required designer variable.

@@ -58,7 +58,7 @@ namespace QuanLyShopBanGiay.DAO
 
         public void Edit(PhieuNhap PhieuNhap, string PhieuNhapId)
         {
-            string sql = $"UPDATE PhieuNhap SET [status] = {PhieuNhap.status}  WHERE id = '{PhieuNhapId}'";
+            string sql = $"UPDATE PhieuNhap SET [status] = {PhieuNhap.status}  WHERE MaPhieuNhap = '{PhieuNhapId}'";
             modify.Command(sql);
         }
     }

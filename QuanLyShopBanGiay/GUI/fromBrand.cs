@@ -1,36 +1,40 @@
 ﻿using QuanLyShopBanGiay.BUS;
-using QuanLyShopBanGiay.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyShopBanGiay.DTO;
+using System.Data.SqlClient;
+using System.Data.Linq;
+
 
 namespace QuanLyShopBanGiay.GUI
 {
-    public partial class frmCategory : Form
+    public partial class fromBrand : Form
     {
-        CategoryBUS categoryBUS = new CategoryBUS();
-        public frmCategory()
+        BrandBUS brandBUS = new BrandBUS();
+        public fromBrand()
         {
             InitializeComponent();
-            viewCate();
+            viewBrand();
             comboBox1.SelectedIndex = 0;
+
+//             EnableEdit();       
         }
 
-        public void viewCate()
+        public void viewBrand()
         {
             listView1.Items.Clear();
-            foreach (Category cate in categoryBUS.GetCategory())
+            foreach(Brand brand in brandBUS.GetBrands())
             {
-                ListViewItem item = new ListViewItem(cate.CategoryId);
-                item.SubItems.Add(cate.CategoryName);
-                if (cate.status == 0)
+                ListViewItem item = new ListViewItem(brand.BrandId);
+                item.SubItems.Add(brand.BrandName);
+                if (brand.status == 0)
                 {
                     item.SubItems.Add("Ngừng Kinh Doanh");
                     item.BackColor = Color.Red;
@@ -44,14 +48,14 @@ namespace QuanLyShopBanGiay.GUI
             }
         }
 
-        public void filterViewCategory(List<Category> items)
+        public void filterViewBrand(List<Brand> items)
         {
             listView1.Items.Clear();
-            foreach (Category Category in items)
+            foreach (Brand brand in items)
             {
-                ListViewItem item = new ListViewItem(Category.CategoryId);
-                item.SubItems.Add(Category.CategoryName);
-                if (Category.status == 0)
+                ListViewItem item = new ListViewItem(brand.BrandId);
+                item.SubItems.Add(brand.BrandName);
+                if (brand.status == 0)
                 {
                     item.SubItems.Add("Ngừng Kinh Doanh");
                     item.BackColor = Color.Red;
@@ -64,42 +68,49 @@ namespace QuanLyShopBanGiay.GUI
                 listView1.Items.Add(item);
             }
         }
+
 
         public void EnableEdit()
         {
-
-            if ((txtMaDanhMuc.Text != "" && txtTenDanhMuc.Text != "") && listView1.SelectedItems.Count > 0)
-            {
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
+           
+            if ((txtMaThuongHieu.Text != "" && txtTenThuongHieu.Text != "") && listView1.SelectedItems.Count > 0)
+                {
+                  btnSua.Enabled = true;
+                  btnXoa.Enabled = true;
 
             }
             else
             {
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
+                  btnSua.Enabled = false;
+                  btnXoa.Enabled = false;
             }
 
         }
 
-
-        private void btnThem_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)  
         {
-            if (txtMaDanhMuc.Text == "" || txtTenDanhMuc.Text == "")
-            {
+            txtMaThuongHieu.Text = "";
+            txtTenThuongHieu.Text = "";
+            EnableEdit();
+            viewBrand();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(txtMaThuongHieu.Text == "" || txtTenThuongHieu.Text == "") {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !!!!");
                 return;
             }
+            
 
 
-
-            Category newCategory = new Category(txtMaDanhMuc.Text, txtTenDanhMuc.Text, 1);
-            if (categoryBUS.CheckID(txtMaDanhMuc.Text) == 0)
+            Brand newBrand = new Brand(txtMaThuongHieu.Text, txtTenThuongHieu.Text,1);
+            if(brandBUS.CheckID(txtMaThuongHieu.Text) == 0)
             {
-                MessageBox.Show("Trùng Danh Mục");
+                MessageBox.Show("Trùng Mã Thương Hiệu");
                 return;
             }
-            else if (categoryBUS.CheckName(txtTenDanhMuc.Text) == 0)
+            else if(brandBUS.CheckName(txtTenThuongHieu.Text) == 0)
             {
                 MessageBox.Show("Trùng Tên !!!");
                 return;
@@ -111,11 +122,10 @@ namespace QuanLyShopBanGiay.GUI
                 // Kiểm tra kết quả từ hộp thoại
                 if (result == DialogResult.Yes)
                 {
-                    categoryBUS.AddCategory(newCategory);
+                    brandBUS.AddBrand(newBrand);
                     MessageBox.Show("Thêm thành công");
-                    viewCate();
-                }
-                else
+                    viewBrand();
+                } else
                 {
                     MessageBox.Show("Đã hủy thêm");
 
@@ -123,44 +133,47 @@ namespace QuanLyShopBanGiay.GUI
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            txtMaDanhMuc.Text = "";
-            txtTenDanhMuc.Text = "";
-            textBox3.Text = "";
-            EnableEdit();
-            viewCate();
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            try
-            {
+            try {
                 if (listView1.SelectedItems.Count > 0)
                 {
                     ListViewItem item = listView1.SelectedItems[0];
                     string ID = item.SubItems[0].Text;
-                    Category editCategory = new Category(txtMaDanhMuc.Text, txtTenDanhMuc.Text, 1);
-                    categoryBUS.UpdateCategory(editCategory, ID);
+                    Brand editBrand = new Brand(txtMaThuongHieu.Text, txtTenThuongHieu.Text,1);
+                    brandBUS.UpdateBrand(editBrand, ID);
                     MessageBox.Show("Sửa thành công");
-                    viewCate();
-                }
-                else
-                {
+                    viewBrand();
+                } else {
                     MessageBox.Show("Vui lòng chọn dòng cần sửa");
                 }
-            }
-            catch (SqlException ex)
+            } catch (SqlException ex)
             {
                 if (ex.Number == 2627)
                 {
                     MessageBox.Show("Vui lòng kiểm tra lại dữ liệu");
-                }
-                else
+                } else
                 {
                     MessageBox.Show("Sửa không thành công ");
                 }
             };
+            
+        }
+
+        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            EnableEdit();
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                txtMaThuongHieu.Text = selectedItem.SubItems[0].Text;
+                txtTenThuongHieu.Text = selectedItem.SubItems[1].Text;
+                // btnSua.Enabled = true;
+            }
+            else
+            {
+                // btnSua.Enabled = false;
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -177,18 +190,17 @@ namespace QuanLyShopBanGiay.GUI
                     {
                         ListViewItem item = listView1.SelectedItems[0];
                         string ID = item.SubItems[0].Text;
-                        Category editCategory = new Category(txtMaDanhMuc.Text, txtTenDanhMuc.Text, 0);
-                        categoryBUS.UpdateCategory(editCategory, ID);
+                        Brand editBrand = new Brand(txtMaThuongHieu.Text, txtTenThuongHieu.Text, 0);
+                        brandBUS.UpdateBrand(editBrand, ID);
                         MessageBox.Show("Đã ngừng kinh doanh mục này");
-                        viewCate();
+                        viewBrand();
                     }
                     else
                     {
                         MessageBox.Show("Vui lòng chọn dòng cần sửa");
                     }
                 }
-            }
-            else
+            } else
             {
                 DialogResult result = MessageBox.Show("Bạn có muốn tiếp tục kinh doanh mục này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -200,10 +212,10 @@ namespace QuanLyShopBanGiay.GUI
                     {
                         ListViewItem item = listView1.SelectedItems[0];
                         string ID = item.SubItems[0].Text;
-                        Category editCategory = new Category(txtMaDanhMuc.Text, txtTenDanhMuc.Text, 1);
-                        categoryBUS.UpdateCategory(editCategory, ID);
+                        Brand editBrand = new Brand(txtMaThuongHieu.Text, txtTenThuongHieu.Text, 1);
+                        brandBUS.UpdateBrand(editBrand, ID);
                         MessageBox.Show("Đã tiếp tục kinh doanh mục này");
-                        viewCate();
+                        viewBrand();
                     }
                     else
                     {
@@ -213,23 +225,17 @@ namespace QuanLyShopBanGiay.GUI
             }
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtMaThuongHieu_Enter(object sender, EventArgs e)
         {
-            EnableEdit();
-            if (listView1.SelectedItems.Count > 0)
-            {
-                ListViewItem selectedItem = listView1.SelectedItems[0];
-                txtMaDanhMuc.Text = selectedItem.SubItems[0].Text;
-                txtTenDanhMuc.Text = selectedItem.SubItems[1].Text;
-                // btnSua.Enabled = true;
-            }
-            else
-            {
-                // btnSua.Enabled = false;
-            }
+
         }
 
-        private void listView1_Click(object sender, EventArgs e)
+        private void FormBrand_Click(object sender, EventArgs e)
+        {
+            EnableEdit();
+        }
+
+        private void listView1_Click_1(object sender, EventArgs e)
         {
             EnableEdit();
         }
@@ -238,58 +244,36 @@ namespace QuanLyShopBanGiay.GUI
         {
             if (textBox3.Text == "")
             {
-                viewCate();
+                viewBrand();
             }
 
             if (comboBox1.SelectedIndex == 0)
             {
-                string filterCategory = textBox3.Text;
-                List<Category> filteredItems = categoryBUS.GetCategory().FindAll(item => item.CategoryId.ToUpper().Contains(filterCategory.ToUpper()));
+                    string filterCategory = textBox3.Text;
+                    List<Brand> filteredItems = brandBUS.GetBrands().FindAll(item => item.BrandId.Contains(filterCategory.ToUpper()));
 
-                // Hiển thị dữ liệu lọc
-                filterViewCategory(filteredItems);
-            }
-            else
+                    // Hiển thị dữ liệu lọc
+                    filterViewBrand(filteredItems);
+            } else
             {
-                string filterCategory = textBox3.Text;
-                List<Category> filteredItems = categoryBUS.GetCategory().FindAll(item => item.CategoryName.ToUpper().Contains(filterCategory.ToUpper()));
+                    string filterCategory = textBox3.Text;
+                    List<Brand> filteredItems = brandBUS.GetBrands().FindAll(item => item.BrandName.ToUpper().Contains(filterCategory.ToUpper()));
 
-                // Hiển thị dữ liệu lọc
-                filterViewCategory(filteredItems);
+                    // Hiển thị dữ liệu lọc
+                    filterViewBrand(filteredItems);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaDanhMuc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTenDanhMuc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string filterCategory =  textBox3.Text;
+            List<Brand> filteredItems = brandBUS.GetBrands().FindAll(item => item.BrandId.Equals(filterCategory));
+
+            // Hiển thị dữ liệu lọc
+            filterViewBrand(filteredItems);
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

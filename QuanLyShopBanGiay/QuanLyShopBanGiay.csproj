@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{39562711-033B-471F-825F-DA9B5E0EF4B7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>QuanLyShopBanGiay</RootNamespace>
     <AssemblyName>QuanLyShopBanGiay</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -187,7 +187,11 @@
   <ItemGroup>
     <Compile Include="BUS\BrandBUS.cs" />
     <Compile Include="BUS\CategoryBUS.cs" />
+    <Compile Include="BUS\CTHoaDonBUS.cs" />
     <Compile Include="BUS\CTPhieuNhapBUS.cs" />
+    <Compile Include="BUS\HoaDonBUS.cs" />
+    <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\KhuyenMaiBUS.cs" />
     <Compile Include="BUS\PhieuNhapBUS.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\SizeBUS.cs" />
@@ -195,7 +199,11 @@
     <Compile Include="DAO\BrandDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\ConnectDatabase.cs" />
+    <Compile Include="DAO\CTHoaDonDAO.cs" />
     <Compile Include="DAO\CTPhieuNhapDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhuyenMaiDAO.cs" />
     <Compile Include="DAO\Modify.cs" />
     <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
@@ -204,17 +212,32 @@
     <Compile Include="DAO\SoLuongDAO.cs" />
     <Compile Include="DTO\Brand.cs" />
     <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\CTHoaDon.cs" />
     <Compile Include="DTO\CTPhieuNhap.cs" />
-    <Compile Include="DTO\KhuyenMaiSP.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\KhuyenMai.cs" />
     <Compile Include="DTO\PhieuNhap.cs" />
     <Compile Include="DTO\Product.cs" />
     <Compile Include="DTO\SoLuong.cs" />
     <Compile Include="DTO\SizeProduct.cs" />
-    <Compile Include="GUI\Form1.cs">
+    <Compile Include="GUI\formTaoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\formTaoHoaDon.Designer.cs">
+      <DependentUpon>formTaoHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formCustomer.Designer.cs">
+      <DependentUpon>formCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formKhuyenMai.Designer.cs">
+      <DependentUpon>formKhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\formNhapHang.cs">
       <SubType>Form</SubType>
@@ -222,11 +245,11 @@
     <Compile Include="GUI\formNhapHang.Designer.cs">
       <DependentUpon>formNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormBrand.cs">
+    <Compile Include="GUI\fromBrand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormBrand.Designer.cs">
-      <DependentUpon>FormBrand.cs</DependentUpon>
+    <Compile Include="GUI\fromBrand.Designer.cs">
+      <DependentUpon>fromBrand.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\formProduct.cs">
       <SubType>Form</SubType>
@@ -240,29 +263,41 @@
     <Compile Include="GUI\formSize.Designer.cs">
       <DependentUpon>formSize.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormXemPhieuNhap.cs">
+    <Compile Include="GUI\formXemPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormXemPhieuNhap.Designer.cs">
-      <DependentUpon>FormXemPhieuNhap.cs</DependentUpon>
+    <Compile Include="GUI\formXemPhieuNhap.Designer.cs">
+      <DependentUpon>formXemPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmCategory.cs">
+    <Compile Include="GUI\formCate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmCategory.Designer.cs">
-      <DependentUpon>frmCategory.cs</DependentUpon>
+    <Compile Include="GUI\formCate.Designer.cs">
+      <DependentUpon>formCate.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmMain.cs">
+    <Compile Include="GUI\formMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="GUI\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ListItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\subForm\addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\subForm\addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\subForm\addKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\subForm\addKhuyenMai.Designer.cs">
+      <DependentUpon>addKhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\subForm\addProduct.cs">
       <SubType>Form</SubType>
@@ -272,14 +307,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\formTaoHoaDon.resx">
+      <DependentUpon>formTaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formCustomer.resx">
+      <DependentUpon>formCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formKhuyenMai.resx">
+      <DependentUpon>formKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formNhapHang.resx">
       <DependentUpon>formNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormBrand.resx">
-      <DependentUpon>FormBrand.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fromBrand.resx">
+      <DependentUpon>fromBrand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formProduct.resx">
       <DependentUpon>formProduct.cs</DependentUpon>
@@ -287,17 +328,23 @@
     <EmbeddedResource Include="GUI\formSize.resx">
       <DependentUpon>formSize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormXemPhieuNhap.resx">
-      <DependentUpon>FormXemPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\formXemPhieuNhap.resx">
+      <DependentUpon>formXemPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmCategory.resx">
-      <DependentUpon>frmCategory.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\formCate.resx">
+      <DependentUpon>formCate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\subForm\addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\subForm\addKhuyenMai.resx">
+      <DependentUpon>addKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\subForm\addProduct.resx">
       <DependentUpon>addProduct.cs</DependentUpon>

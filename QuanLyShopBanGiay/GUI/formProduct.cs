@@ -460,13 +460,13 @@ namespace QuanLyShopBanGiay.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormBrand f = new FormBrand();
+            fromBrand f = new fromBrand();
             f.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmCategory f = new frmCategory();
+            formCate f = new formCate();
             f.ShowDialog();
         }
 

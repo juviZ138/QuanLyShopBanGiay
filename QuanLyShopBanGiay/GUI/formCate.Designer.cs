@@ -1,6 +1,6 @@
 ﻿namespace QuanLyShopBanGiay.GUI
 {
-    partial class frmCategory
+    partial class formCate
     {
         /// <summary>
         /// Required designer variable.

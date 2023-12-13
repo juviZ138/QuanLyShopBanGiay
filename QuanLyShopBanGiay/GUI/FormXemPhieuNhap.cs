@@ -22,12 +22,12 @@ using System.Runtime.InteropServices.ComTypes;
 
 namespace QuanLyShopBanGiay.GUI
 {
-    public partial class FormXemPhieuNhap : Form
+    public partial class formXemPhieuNhap : Form
     {
         PhieuNhapBUS PhieuNhapBUS = new PhieuNhapBUS();
         CTPhieuNhapBUS ChiTietBUS = new CTPhieuNhapBUS();
         private string pathFile = "";//save path of file excel 
-        public FormXemPhieuNhap()
+        public formXemPhieuNhap()
         {
             InitializeComponent();
             LoadPhieuNhap();
@@ -363,7 +363,7 @@ namespace QuanLyShopBanGiay.GUI
                     DisplayInvoicesWithinTimeFrame(listPN, DateTime.Now.AddYears(-1), DateTime.Now);
                 }
 
-                if (cbTheoKhoang.SelectedIndex == 3)
+                if (cbTheoKhoang.SelectedIndex == 4)
                 {
                     LoadPhieuNhap();
                 }

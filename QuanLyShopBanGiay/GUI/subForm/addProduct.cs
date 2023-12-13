@@ -287,13 +287,13 @@ namespace QuanLyShopBanGiay.GUI.subForm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmCategory f = new frmCategory();
+            formCate f = new formCate();
             f.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormBrand f = new FormBrand();
+            fromBrand f = new fromBrand();
             f.ShowDialog();
         }
 

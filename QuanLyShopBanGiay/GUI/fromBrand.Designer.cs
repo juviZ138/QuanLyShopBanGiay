@@ -1,6 +1,6 @@
 ﻿namespace QuanLyShopBanGiay.GUI
 {
-    partial class FormBrand
+    partial class fromBrand
     {
         /// <summary>
         /// Required designer variable.
@@ -100,6 +100,7 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.Click += new System.EventHandler(this.listView1_Click_1);
             // 
             // columnHeader1

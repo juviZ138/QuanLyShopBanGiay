@@ -28,6 +28,7 @@ namespace QuanLyShopBanGiay.GUI
         {
             InitializeComponent();
             LoadHoaDon();
+    
         }
 
         public void LoadHoaDon()
@@ -297,6 +298,11 @@ namespace QuanLyShopBanGiay.GUI
 
                 LoadHoaDon(filteredInvoices);
             }
+        }
+
+        private void cbTheoKhoang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

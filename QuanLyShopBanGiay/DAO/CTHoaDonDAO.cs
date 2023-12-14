@@ -52,7 +52,7 @@ namespace QuanLyShopBanGiay.DAO
 
         public void Add(CTHoaDon CTHoaDon)
         {
-            string sql = $"INSERT INTO bill_details VALUES( '{CTHoaDon.MaHoaDon}','{CTHoaDon.MaSP}','{CTHoaDon.MaSize}',{CTHoaDon.GiaBan},{CTHoaDon.soLuong})";
+            string sql = $"INSERT INTO bill_details VALUES( '{CTHoaDon.MaHoaDon}','{CTHoaDon.MaSP}','{CTHoaDon.MaSize}',{CTHoaDon.soLuong},{CTHoaDon.GiaBan})";
             modify.Command(sql);
         }
     }

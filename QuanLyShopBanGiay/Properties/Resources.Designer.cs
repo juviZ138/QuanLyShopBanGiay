@@ -133,6 +133,16 @@ namespace QuanLyShopBanGiay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_chart_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-chart-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_customer_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-customer-50", resourceCulture);

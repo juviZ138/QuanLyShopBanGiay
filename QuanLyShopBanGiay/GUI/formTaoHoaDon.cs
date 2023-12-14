@@ -165,6 +165,8 @@ namespace QuanLyShopBanGiay.GUI
 
         public void AutoID()
         {
+            Users users = formMain.user;
+
             DataTable dt = hoaDonBUS.GetAllHoaDon();
 
             string s = "";
@@ -189,7 +191,7 @@ namespace QuanLyShopBanGiay.GUI
                 s = s + k.ToString();
             }
             txtMaHD.Text = s;
-
+            txtMaNV.Text = users.user_id;
         }
 
         private void loadSize()
@@ -606,12 +608,11 @@ namespace QuanLyShopBanGiay.GUI
             }
 
 
-
-            if (chkBPoint.Checked && !checkBox2.Checked)
+            if (checkBox1.Checked && !checkBox2.Checked)
             {
                 FilterDM = ListProduct.FindAll(item => item.CategoryId == cbFilterDM.SelectedValue.ToString());
             }
-            else if (!chkBPoint.Checked && checkBox2.Checked)
+            else if (!checkBox1.Checked && checkBox2.Checked)
             {
                 FilterDM = ListProduct.FindAll(item => item.BrandId == cbFilterTH.SelectedValue.ToString());
             }

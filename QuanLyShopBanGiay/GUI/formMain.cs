@@ -18,6 +18,11 @@ namespace QuanLyShopBanGiay.GUI
         public static Users user = null;
         private Form activeForm = null; 
 
+        private void loadLable()
+        {
+            label2.Text = user.user_id;
+            label1.Text = user.full_name.ToUpper();
+        }
         private void openChildForm(Form childForm)
         {
             if(activeForm != null)
@@ -43,6 +48,13 @@ namespace QuanLyShopBanGiay.GUI
             }
 
         }
+
+        public Users getNhanVien()
+        {
+            return user;
+
+        }
+
 
         public void phanquyen(Users nhanVien)
         {
@@ -86,13 +98,13 @@ namespace QuanLyShopBanGiay.GUI
                 btnKH.Hide();
             }
 
-
+            
         }
 
 
         public formMain()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,6 +125,7 @@ namespace QuanLyShopBanGiay.GUI
         private void frmMain_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
+            loadLable();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -158,6 +171,11 @@ namespace QuanLyShopBanGiay.GUI
             openChildForm(f);
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            formThongKe f = new formThongKe();
+            f.MdiParent = formMain.ActiveForm;
+            openChildForm(f);
+        }
     }
 }

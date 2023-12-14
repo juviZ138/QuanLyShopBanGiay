@@ -54,7 +54,13 @@ namespace QuanLyShopBanGiay.GUI
 
         public void LoadIMG(string img)
         {
-            this.pictureBox1.Image = System.Drawing.Image.FromFile(img);
+            try
+            {
+              this.pictureBox1.Image = System.Drawing.Image.FromFile(img);
+            } catch(Exception ex)
+            {
+               
+            }
         }
 
 

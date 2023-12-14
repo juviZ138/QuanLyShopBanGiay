@@ -60,6 +60,7 @@
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(519, 9);
+            this.label1.Location = new System.Drawing.Point(411, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 37);
@@ -215,7 +216,7 @@
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiachi.Multiline = true;
             this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(228, 114);
+            this.txtDiachi.Size = new System.Drawing.Size(228, 84);
             this.txtDiachi.TabIndex = 17;
             // 
             // txtSdt
@@ -246,7 +247,7 @@
             // 
             this.radioTrangThai.AutoSize = true;
             this.radioTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioTrangThai.Location = new System.Drawing.Point(467, 280);
+            this.radioTrangThai.Location = new System.Drawing.Point(467, 277);
             this.radioTrangThai.Name = "radioTrangThai";
             this.radioTrangThai.Size = new System.Drawing.Size(174, 24);
             this.radioTrangThai.TabIndex = 22;
@@ -283,59 +284,64 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(750, 422);
+            this.txtTimkiem.Location = new System.Drawing.Point(162, 335);
             this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.Size = new System.Drawing.Size(219, 30);
+            this.txtTimkiem.Size = new System.Drawing.Size(639, 30);
             this.txtTimkiem.TabIndex = 25;
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(997, 395);
+            this.btnTimkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTimkiem.Location = new System.Drawing.Point(846, 308);
             this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(110, 57);
+            this.btnTimkiem.Size = new System.Drawing.Size(206, 57);
             this.btnTimkiem.TabIndex = 27;
             this.btnTimkiem.Text = "Tìm";
-            this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(901, 74);
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnThem.Location = new System.Drawing.Point(846, 66);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(79, 31);
+            this.btnThem.Size = new System.Drawing.Size(206, 52);
             this.btnThem.TabIndex = 28;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(901, 130);
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSua.Location = new System.Drawing.Point(846, 126);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(79, 31);
+            this.btnSua.Size = new System.Drawing.Size(206, 52);
             this.btnSua.TabIndex = 29;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(901, 177);
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXoa.Location = new System.Drawing.Point(846, 186);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(79, 31);
+            this.btnXoa.Size = new System.Drawing.Size(206, 52);
             this.btnXoa.TabIndex = 30;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(901, 226);
+            this.btnClear.BackColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(846, 249);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(79, 31);
+            this.btnClear.Size = new System.Drawing.Size(206, 52);
             this.btnClear.TabIndex = 31;
-            this.btnClear.Text = "CLear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // pictureBoxShow
@@ -363,19 +369,32 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 458);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 397);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1029, 224);
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(34, 342);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 20);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Tìm Kiếm";
             // 
             // UserGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 678);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1108, 678);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBoxShow);
             this.Controls.Add(this.btnClear);
@@ -452,5 +471,6 @@
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.PictureBox pictureBoxHide;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label11;
     }
 }

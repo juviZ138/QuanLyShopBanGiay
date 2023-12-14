@@ -189,6 +189,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -277,6 +278,12 @@
     </Compile>
     <Compile Include="GUI\formNhapHang.Designer.cs">
       <DependentUpon>formNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formThongKe.Designer.cs">
+      <DependentUpon>formThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\formXemHoaDon.cs">
       <SubType>Form</SubType>
@@ -372,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formNhapHang.resx">
       <DependentUpon>formNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formThongKe.resx">
+      <DependentUpon>formThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formXemHoaDon.resx">
       <DependentUpon>formXemHoaDon.cs</DependentUpon>
@@ -484,6 +494,9 @@
     <None Include="Resources\icons8-search-50 %281%29.png" />
     <None Include="Resources\icons8-customer-50.png" />
     <None Include="Resources\icons8-role-66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chart-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

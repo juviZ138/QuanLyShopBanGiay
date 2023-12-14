@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using QuanLyShopBanGiay.BUS;
@@ -133,44 +134,85 @@ namespace QuanLyShopBanGiay.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            int maChucVu = 0;
-            if (listRole != null)
+
+            string password = txtPass.Text;
+            string full_name = txtHoten.Text;
+            string email = txtEmail.Text;
+            string phone = txtSdt.Text;
+            string cccd = txtCCCD.Text;
+            string gender = comboBoxGioitinh.SelectedItem.ToString();
+            string year_birth = txtNamsinh.Text;
+            string address = txtDiachi.Text;
+            int ChucVu = comboBoxChucvu.SelectedIndex;
+
+            if (full_name.Trim() == "") { MessageBox.Show("Vui lòng nhập Họ Và Tên "); }
+            else if (year_birth == null) { MessageBox.Show("Vui lòng chọn ngày sinh "); }
+            else if (password.Trim() == "") { MessageBox.Show("Vui lòng nhập Mật Khẩu "); }
+            else if (phone.Trim() == "") { MessageBox.Show("Vui lòng nhập số điênh thoại "); }
+            else
             {
-                for (int i = 0; i < listRole.Count(); i++)
+                int maChucVu = 0;
+                if (listRole != null)
                 {
-                    if (comboBoxChucvu.SelectedIndex == i)
+                    for (int i = 0; i < listRole.Count(); i++)
                     {
-                        maChucVu = listRole[i].role_id;
+                        if (comboBoxChucvu.SelectedIndex == i)
+                        {
+                            maChucVu = listRole[i].role_id;
+                        }
                     }
                 }
-            }
 
-            int trangThaiTaiKhoan = 0;
+                int trangThaiTaiKhoan = 0;
 
-            if (radioTrangThai.Checked == false)
-            {
-                trangThaiTaiKhoan = 0;
-            }
-            else
-            {
-                trangThaiTaiKhoan = 1;
-            }
-            Users us1 = new Users(txtMatk.Text, txtPass.Text, txtHoten.Text, txtEmail.Text, txtSdt.Text, txtCCCD.Text, comboBoxGioitinh.SelectedItem.ToString(), txtNamsinh.Text, txtDiachi.Text, maChucVu, trangThaiTaiKhoan);
+                if (radioTrangThai.Checked == false)
+                {
+                    trangThaiTaiKhoan = 0;
+                }
+                else
+                {
+                    trangThaiTaiKhoan = 1;
+                }
+                Users us1 = new Users(txtMatk.Text, txtPass.Text, txtHoten.Text, txtEmail.Text, txtSdt.Text, txtCCCD.Text, comboBoxGioitinh.SelectedItem.ToString(), txtNamsinh.Text, txtDiachi.Text, maChucVu, trangThaiTaiKhoan);
 
 
-            UserBLL userBLL = new UserBLL();
-            Boolean ktra = userBLL.suaUser(us1);
-            if (ktra)
-            {
-                MessageBox.Show("Sửa Thành công");
-                Load1();
-                clear();
+                UserBLL userBLL = new UserBLL();
+                Boolean ktra = userBLL.suaUser(us1);
+                if (ktra)
+                {
+                    MessageBox.Show("Sửa Thành công");
+                    Load1();
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công");
+                }
             }
-            else
-            {
-                MessageBox.Show("Sửa không thành công");
-            }
+            
         }
+
+        static bool IsPhoneNumber(string input)
+        {
+            // Sử dụng biểu thức chính quy để kiểm tra định dạng số điện thoại
+            // Đây là một biểu thức chính quy đơn giản, bạn có thể điều chỉnh nó tùy thuộc vào yêu cầu cụ thể của bạn
+            string phoneNumberPattern = @"^(0[1-9][0-9]{8})$";
+
+            Regex regex = new Regex(phoneNumberPattern);
+
+            return regex.IsMatch(input);
+        }
+
+        static bool IsEmail(string input)
+        {
+            // Sử dụng biểu thức chính quy để kiểm tra định dạng số điện thoại
+            // Đây là một biểu thức chính quy đơn giản, bạn có thể điều chỉnh nó tùy thuộc vào yêu cầu cụ thể của bạn
+            Regex emailRegex = new Regex("(?<user>[^@]+)@(?<host>.+)");
+
+            return emailRegex.IsMatch(input);
+        }
+        
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -191,6 +233,18 @@ namespace QuanLyShopBanGiay.GUI
             if (ex != null)
             {
                 MessageBox.Show("Trùng mã nhân viên");
+                return;
+            }
+
+            if (!IsEmail(email))
+            {
+                MessageBox.Show("Nhập sai định dạng email");
+                return;
+            }
+
+            if (!IsPhoneNumber(phone))
+            {
+                MessageBox.Show("Nhập sai định dạng SĐT");
                 return;
             }
 
@@ -246,24 +300,44 @@ namespace QuanLyShopBanGiay.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            Boolean ktra = false;
-            string manhanvien = txtMatk.Text;
-            DialogResult dialog;
-            dialog = MessageBox.Show("Bạn có muốn xóa nhân viên " + manhanvien, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
-            {
-                UserBLL nhanVienBLL = new UserBLL();
-                ktra = nhanVienBLL.xoaUser(manhanvien);
 
-                if (ktra)
+            string password = txtPass.Text;
+            string full_name = txtHoten.Text;
+            string email = txtEmail.Text;
+            string phone = txtSdt.Text;
+            string cccd = txtCCCD.Text;
+            string gender = comboBoxGioitinh.SelectedItem.ToString();
+            string year_birth = txtNamsinh.Text;
+            string address = txtDiachi.Text;
+            int ChucVu = comboBoxChucvu.SelectedIndex;
+
+            if (full_name.Trim() == "") { MessageBox.Show("Vui lòng nhập Họ Và Tên "); }
+            else if (year_birth == null) { MessageBox.Show("Vui lòng chọn ngày sinh "); }
+            else if (password.Trim() == "") { MessageBox.Show("Vui lòng nhập Mật Khẩu "); }
+            else if (phone.Trim() == "") { MessageBox.Show("Vui lòng nhập số điênh thoại "); }
+
+            else
+            {
+
+                Boolean ktra = false;
+                string manhanvien = txtMatk.Text;
+                DialogResult dialog;
+                dialog = MessageBox.Show("Bạn có muốn xóa nhân viên " + manhanvien, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa Thành Công");
-                    Load1();
-                    clear();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa Không Thành Công");
+                    UserBLL nhanVienBLL = new UserBLL();
+                    ktra = nhanVienBLL.xoaUser(manhanvien);
+
+                    if (ktra)
+                    {
+                        MessageBox.Show("Xóa Thành Công");
+                        Load1();
+                        clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa Không Thành Công");
+                    }
                 }
             }
         }

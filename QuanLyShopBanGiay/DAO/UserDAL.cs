@@ -115,7 +115,7 @@ namespace QuanLyShopBanGiay.DAO
             try
             {
 
-                string query = $"UPDATE dbo.tbl_user SET [user_id] = '{user.user_id}' ,[password] = N'{user.password}',[full_name] = '{user.full_name}', [email] = '{user.email}', [phone] = '{user.phone}', [cccd] = '{user.cccd}', [gender] = '{user.gender}', [year_birth] = '{user.year_birth}', [address] = '{user.address}', [role_id] = {user.role_id}, [isDeleted] = {user.isDeleted} WHERE user_id = '{user.user_id}'";
+                string query = $"UPDATE dbo.tbl_user SET [user_id] = '{user.user_id}' ,[password] = N'{user.password}',[full_name] = N'{user.full_name}', [email] = '{user.email}', [phone] = '{user.phone}', [cccd] = '{user.cccd}', [gender] = N'{user.gender}', [year_birth] = '{user.year_birth}', [address] = N'{user.address}', [role_id] = {user.role_id}, [isDeleted] = {user.isDeleted} WHERE user_id = '{user.user_id}'";
 
                 using (SqlConnection sqlConnection = SqlConnectionData.Connect())
                 {

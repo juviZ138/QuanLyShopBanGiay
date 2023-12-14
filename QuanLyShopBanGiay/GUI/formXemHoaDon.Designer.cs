@@ -193,6 +193,7 @@
             this.cbTheoKhoang.Name = "cbTheoKhoang";
             this.cbTheoKhoang.Size = new System.Drawing.Size(121, 28);
             this.cbTheoKhoang.TabIndex = 0;
+            this.cbTheoKhoang.SelectedIndexChanged += new System.EventHandler(this.cbTheoKhoang_SelectedIndexChanged);
             // 
             // button3
             // 

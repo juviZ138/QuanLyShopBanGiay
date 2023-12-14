@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System.Data;
-using Shoes_Management.BUS;
 using QuanLyShopBanGiay.BUS;
 using QuanLyShopBanGiay.DTO;
 

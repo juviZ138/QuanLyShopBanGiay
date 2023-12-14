@@ -263,6 +263,12 @@
     <Compile Include="GUI\formNhapHang.Designer.cs">
       <DependentUpon>formNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\formXemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formXemHoaDon.Designer.cs">
+      <DependentUpon>formXemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fromBrand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formNhapHang.resx">
       <DependentUpon>formNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formXemHoaDon.resx">
+      <DependentUpon>formXemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fromBrand.resx">
       <DependentUpon>fromBrand.cs</DependentUpon>

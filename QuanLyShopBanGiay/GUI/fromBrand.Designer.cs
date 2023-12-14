@@ -39,11 +39,11 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,54 +120,48 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(51, 162);
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThem.Location = new System.Drawing.Point(72, 162);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(151, 69);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.Blue;
             this.btnSua.Enabled = false;
-            this.btnSua.Location = new System.Drawing.Point(208, 162);
+            this.btnSua.Location = new System.Drawing.Point(260, 162);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(151, 69);
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(365, 162);
+            this.btnXoa.Location = new System.Drawing.Point(448, 162);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(151, 69);
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Ngừng/Tiếp Tục Kinh Doanh";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(679, 162);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(151, 69);
-            this.btnTimKiem.TabIndex = 8;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(522, 162);
+            this.btnReset.BackColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(634, 162);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(151, 69);
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
@@ -203,22 +197,33 @@
             this.comboBox1.Size = new System.Drawing.Size(263, 37);
             this.comboBox1.TabIndex = 11;
             // 
-            // FormBrand
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(518, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tìm Kiếm";
+            // 
+            // fromBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(888, 590);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.listView1);
-            this.Name = "FormBrand";
-            this.Text = "FormBrand";
+            this.Name = "fromBrand";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản Lý Thương Hiệu";
             this.Click += new System.EventHandler(this.FormBrand_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -237,7 +242,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
@@ -245,5 +249,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label label3;
     }
 }

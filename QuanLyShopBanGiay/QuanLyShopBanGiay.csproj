@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -397,7 +412,6 @@
     <EmbeddedResource Include="GUI\UserGUI.resx">
       <DependentUpon>UserGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -408,8 +422,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserGUI.resx" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -424,7 +436,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IMG\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pexels-zain-ali-1027130.jpg" />
@@ -437,6 +458,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1034957-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48.png" />
+    <None Include="Resources\icons8-import-50.png" />
+    <None Include="Resources\icons8-reset-100.png" />
+    <None Include="Resources\icons8-reset-50.png" />
+    <None Include="Resources\icons8-reset-30.png" />
+    <None Include="Resources\icons8-edit-100.png" />
+    <None Include="Resources\icons8-edit-50.png" />
+    <None Include="Resources\icons8-edit-30.png" />
+    <None Include="Resources\icons8-admin-50.png" />
+    <None Include="Resources\icons8-admin-30.png" />
+    <None Include="Resources\icons8-add-96.png" />
+    <None Include="Resources\icons8-add-48.png" />
+    <None Include="Resources\icons8-excel-48.png" />
+    <None Include="Resources\icons8-stop-64.png" />
+    <None Include="Resources\icons8-pos-50.png" />
+    <None Include="Resources\icons8-product-50.png" />
+    <None Include="Resources\icons8-promo-50.png" />
+    <None Include="Resources\icons8-bill-50.png" />
+    <None Include="Resources\icons8-import-30.png" />
+    <None Include="Resources\icons8-print-50.png" />
+    <None Include="Resources\icons8-search-50.png" />
+    <None Include="Resources\icons8-search-50 %281%29.png" />
+    <None Include="Resources\icons8-customer-50.png" />
+    <None Include="Resources\icons8-role-66.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

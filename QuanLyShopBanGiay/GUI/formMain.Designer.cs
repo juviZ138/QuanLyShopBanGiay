@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btnKM);
             this.panel1.Controls.Add(this.btnProduct);
             this.panel1.Controls.Add(this.btnPermission);
@@ -66,11 +66,14 @@
             this.btnKM.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKM.FlatAppearance.BorderSize = 0;
             this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKM.Location = new System.Drawing.Point(0, 890);
+            this.btnKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKM.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_promo_50;
+            this.btnKM.Location = new System.Drawing.Point(0, 660);
             this.btnKM.Name = "btnKM";
             this.btnKM.Size = new System.Drawing.Size(217, 100);
             this.btnKM.TabIndex = 8;
             this.btnKM.Text = "Khuyến Mãi";
+            this.btnKM.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKM.UseVisualStyleBackColor = false;
             this.btnKM.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -80,25 +83,31 @@
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduct.FlatAppearance.BorderSize = 0;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Location = new System.Drawing.Point(0, 790);
+            this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_product_50;
+            this.btnProduct.Location = new System.Drawing.Point(0, 580);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(217, 100);
+            this.btnProduct.Size = new System.Drawing.Size(217, 80);
             this.btnProduct.TabIndex = 7;
             this.btnProduct.Text = "Sản Phẩm";
+            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnProduct.UseVisualStyleBackColor = false;
             this.btnProduct.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnPermission
             // 
-            this.btnPermission.BackColor = System.Drawing.Color.Yellow;
+            this.btnPermission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPermission.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPermission.FlatAppearance.BorderSize = 0;
             this.btnPermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermission.Location = new System.Drawing.Point(0, 690);
+            this.btnPermission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermission.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_role_66;
+            this.btnPermission.Location = new System.Drawing.Point(0, 500);
             this.btnPermission.Name = "btnPermission";
-            this.btnPermission.Size = new System.Drawing.Size(217, 100);
+            this.btnPermission.Size = new System.Drawing.Size(217, 80);
             this.btnPermission.TabIndex = 6;
             this.btnPermission.Text = "Quyền";
+            this.btnPermission.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnPermission.UseVisualStyleBackColor = false;
             this.btnPermission.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -108,11 +117,14 @@
             this.btnNH.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNH.FlatAppearance.BorderSize = 0;
             this.btnNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNH.Location = new System.Drawing.Point(0, 590);
+            this.btnNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNH.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_import_50;
+            this.btnNH.Location = new System.Drawing.Point(0, 420);
             this.btnNH.Name = "btnNH";
-            this.btnNH.Size = new System.Drawing.Size(217, 100);
+            this.btnNH.Size = new System.Drawing.Size(217, 80);
             this.btnNH.TabIndex = 5;
             this.btnNH.Text = "Nhập Hàng";
+            this.btnNH.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnNH.UseVisualStyleBackColor = false;
             this.btnNH.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -122,11 +134,14 @@
             this.btnHD.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHD.FlatAppearance.BorderSize = 0;
             this.btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHD.Location = new System.Drawing.Point(0, 490);
+            this.btnHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHD.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_bill_50;
+            this.btnHD.Location = new System.Drawing.Point(0, 340);
             this.btnHD.Name = "btnHD";
-            this.btnHD.Size = new System.Drawing.Size(217, 100);
+            this.btnHD.Size = new System.Drawing.Size(217, 80);
             this.btnHD.TabIndex = 4;
             this.btnHD.Text = "Hóa Đơn";
+            this.btnHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnHD.UseVisualStyleBackColor = false;
             this.btnHD.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -136,11 +151,14 @@
             this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSale.FlatAppearance.BorderSize = 0;
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Location = new System.Drawing.Point(0, 390);
+            this.btnSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_pos_50;
+            this.btnSale.Location = new System.Drawing.Point(0, 260);
             this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(217, 100);
+            this.btnSale.Size = new System.Drawing.Size(217, 80);
             this.btnSale.TabIndex = 3;
             this.btnSale.Text = "Bán Hàng";
+            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSale.UseVisualStyleBackColor = false;
             this.btnSale.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -150,11 +168,14 @@
             this.btnKH.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKH.FlatAppearance.BorderSize = 0;
             this.btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKH.Location = new System.Drawing.Point(0, 290);
+            this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKH.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_customer_50;
+            this.btnKH.Location = new System.Drawing.Point(0, 180);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Size = new System.Drawing.Size(217, 100);
+            this.btnKH.Size = new System.Drawing.Size(217, 80);
             this.btnKH.TabIndex = 2;
             this.btnKH.Text = "Khách Hàng";
+            this.btnKH.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKH.UseVisualStyleBackColor = false;
             this.btnKH.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -164,11 +185,14 @@
             this.btnTK.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTK.FlatAppearance.BorderSize = 0;
             this.btnTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTK.Location = new System.Drawing.Point(0, 190);
+            this.btnTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTK.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_admin_50;
+            this.btnTK.Location = new System.Drawing.Point(0, 100);
             this.btnTK.Name = "btnTK";
-            this.btnTK.Size = new System.Drawing.Size(217, 100);
+            this.btnTK.Size = new System.Drawing.Size(217, 80);
             this.btnTK.TabIndex = 1;
             this.btnTK.Text = "Tài Khoản";
+            this.btnTK.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnTK.UseVisualStyleBackColor = false;
             this.btnTK.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -178,7 +202,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 190);
+            this.panel3.Size = new System.Drawing.Size(217, 100);
             this.panel3.TabIndex = 0;
             // 
             // panel2

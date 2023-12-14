@@ -47,13 +47,13 @@ namespace QuanLyShopBanGiay.DAO
 
         public void Add(Brand brand)
         {
-            string sql = $"INSERT INTO brand VALUES( '{brand.BrandId}','{brand.BrandName}','{brand.status}')";
+            string sql = $"INSERT INTO brand VALUES( '{brand.BrandId}',N'{brand.BrandName}','{brand.status}')";
             modify.Command(sql);
         }
 
         public void Edit(Brand brand, string brandId)
         {
-            string sql = $"UPDATE brand SET [id] = '{brand.BrandId}' ,[name] = '{brand.BrandName}',[status] = {brand.status}  WHERE id = '{brandId}'";
+            string sql = $"UPDATE brand SET [id] = '{brand.BrandId}' ,[name] = N'{brand.BrandName}',[status] = {brand.status}  WHERE id = '{brandId}'";
             modify.Command(sql);
         }
 

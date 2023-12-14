@@ -151,11 +151,13 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_reset_50;
             this.btnReset.Location = new System.Drawing.Point(613, 138);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(151, 69);
             this.btnReset.TabIndex = 27;
             this.btnReset.Text = "Reset";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -168,6 +170,7 @@
             this.btnXoa.Size = new System.Drawing.Size(151, 69);
             this.btnXoa.TabIndex = 25;
             this.btnXoa.Text = "Ngừng/Tiếp Tục Kinh Doanh";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -175,22 +178,26 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnSua.Enabled = false;
+            this.btnSua.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_edit_50;
             this.btnSua.Location = new System.Drawing.Point(219, 138);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(151, 69);
             this.btnSua.TabIndex = 24;
             this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThem.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_add_48;
             this.btnThem.Location = new System.Drawing.Point(30, 138);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(151, 69);
             this.btnThem.TabIndex = 23;
             this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 

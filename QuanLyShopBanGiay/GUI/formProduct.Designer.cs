@@ -83,6 +83,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,16 +157,18 @@
             // 
             // btnDeleteBrand
             // 
-            this.btnDeleteBrand.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDeleteBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDeleteBrand.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteBrand.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBrand.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteBrand.Location = new System.Drawing.Point(303, 79);
+            this.btnDeleteBrand.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteBrand.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_reset_30;
+            this.btnDeleteBrand.Location = new System.Drawing.Point(321, 78);
             this.btnDeleteBrand.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnDeleteBrand.Name = "btnDeleteBrand";
-            this.btnDeleteBrand.Size = new System.Drawing.Size(250, 53);
+            this.btnDeleteBrand.Size = new System.Drawing.Size(267, 50);
             this.btnDeleteBrand.TabIndex = 10;
             this.btnDeleteBrand.Text = "Ngừng/ Tiếp Tục Kinh Doanh";
+            this.btnDeleteBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteBrand.UseVisualStyleBackColor = false;
             this.btnDeleteBrand.Click += new System.EventHandler(this.btnDeleteBrand_Click_1);
             // 
@@ -173,39 +176,42 @@
             // 
             this.btnAddBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddBrand.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddBrand.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_add_48;
             this.btnAddBrand.Location = new System.Drawing.Point(36, 78);
             this.btnAddBrand.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAddBrand.Name = "btnAddBrand";
-            this.btnAddBrand.Size = new System.Drawing.Size(250, 51);
+            this.btnAddBrand.Size = new System.Drawing.Size(263, 51);
             this.btnAddBrand.TabIndex = 6;
             this.btnAddBrand.Text = "Thêm Sản Phẩm Mới";
+            this.btnAddBrand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddBrand.UseVisualStyleBackColor = false;
             this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(190, 17);
+            this.button3.Location = new System.Drawing.Point(409, 24);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 48);
             this.button3.TabIndex = 35;
-            this.button3.Text = "Brands";
+            this.button3.Text = "Thương Hiệu";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(29, 15);
+            this.button4.Location = new System.Drawing.Point(268, 24);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 50);
+            this.button4.Size = new System.Drawing.Size(137, 50);
             this.button4.TabIndex = 36;
-            this.button4.Text = "Cate";
+            this.button4.Text = "Danh Mục";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.button1);
@@ -573,12 +579,14 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_edit_30;
             this.btnUpdate.Location = new System.Drawing.Point(18, 421);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(305, 60);
             this.btnUpdate.TabIndex = 65;
             this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -616,6 +624,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -659,10 +668,23 @@
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 38);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Quản Lý Sản Phẩm";
+            // 
             // formProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1158, 716);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1158, 677);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
@@ -684,6 +706,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -743,5 +766,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox cbFilter;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label1;
     }
 }

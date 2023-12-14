@@ -72,7 +72,26 @@ namespace QuanLyShopBanGiay.GUI
                 txtPhone.Text = item.SubItems[2].Text;
                 txtTotal.Text = item.SubItems[3].Text;
                 txtPoint.Text = item.SubItems[4].Text;
+
+                LoadHoaDon();
             }
+        }
+
+        HoaDonBUS hoaDonBUS = new HoaDonBUS();
+        public void LoadHoaDon()
+        {
+            List<HoaDon> list = hoaDonBUS.GetHoaDon().Where(i => i.MaKhachHang == txtMaKH.Text).ToList();
+
+            listView2.Items.Clear();
+            foreach(HoaDon hoaDon in list)
+            {
+                ListViewItem item = new ListViewItem(hoaDon.MaHoaDon);
+                item.SubItems.Add(hoaDon.date.ToString());
+                item.SubItems.Add(hoaDon.TongCong.ToString());
+
+                listView2.Items.Add(item);
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

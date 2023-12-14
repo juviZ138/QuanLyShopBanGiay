@@ -121,11 +121,13 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThem.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_add_48;
             this.btnThem.Location = new System.Drawing.Point(72, 162);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(151, 69);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -133,11 +135,13 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.Blue;
             this.btnSua.Enabled = false;
+            this.btnSua.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_edit_30;
             this.btnSua.Location = new System.Drawing.Point(260, 162);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(151, 69);
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -156,11 +160,13 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_reset_30;
             this.btnReset.Location = new System.Drawing.Point(634, 162);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(151, 69);
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "Reset";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.button5_Click);
             // 

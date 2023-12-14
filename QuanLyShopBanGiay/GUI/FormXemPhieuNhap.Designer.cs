@@ -44,22 +44,23 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbTheoKhoang = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.rad1 = new System.Windows.Forms.RadioButton();
-            this.rad2 = new System.Windows.Forms.RadioButton();
-            this.cbThang = new System.Windows.Forms.ComboBox();
-            this.rad3 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbNam = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rad3 = new System.Windows.Forms.RadioButton();
+            this.cbThang = new System.Windows.Forms.ComboBox();
+            this.rad2 = new System.Windows.Forms.RadioButton();
+            this.rad1 = new System.Windows.Forms.RadioButton();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbTheoKhoang = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,40 +190,50 @@
             this.columnHeader8.Text = "Đơn Giá";
             this.columnHeader8.Width = 100;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(36, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 59);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Tạo Phiếu Nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(212, 31);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 59);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Nhập Excel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(380, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 59);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "In Phiếu Nhập";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Thành Tiền";
             this.columnHeader9.Width = 150;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_add_48;
+            this.button1.Location = new System.Drawing.Point(16, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 59);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Tạo Phiếu Nhập";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_excel_48;
+            this.button2.Location = new System.Drawing.Point(167, 43);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 59);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Nhập Excel";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_print_50;
+            this.button3.Location = new System.Drawing.Point(318, 43);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 59);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "In Phiếu Nhập";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -240,55 +251,40 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
-            // cbTheoKhoang
+            // cbNam
             // 
-            this.cbTheoKhoang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTheoKhoang.Enabled = false;
-            this.cbTheoKhoang.FormattingEnabled = true;
-            this.cbTheoKhoang.Items.AddRange(new object[] {
-            "1 Tháng ",
-            "3 Tháng",
-            "6 Tháng",
-            "1 Năm ",
-            "Tất Cả"});
-            this.cbTheoKhoang.Location = new System.Drawing.Point(137, 21);
-            this.cbTheoKhoang.Name = "cbTheoKhoang";
-            this.cbTheoKhoang.Size = new System.Drawing.Size(121, 28);
-            this.cbTheoKhoang.TabIndex = 0;
+            this.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNam.Enabled = false;
+            this.cbNam.FormattingEnabled = true;
+            this.cbNam.Items.AddRange(new object[] {
+            "2023",
+            "2022",
+            "2021",
+            "2020"});
+            this.cbNam.Location = new System.Drawing.Point(478, 20);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(92, 28);
+            this.cbNam.TabIndex = 7;
             // 
-            // button4
+            // dateTimePicker1
             // 
-            this.button4.Location = new System.Drawing.Point(399, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(171, 37);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Lọc Phiếu Nhập";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(137, 60);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(242, 26);
+            this.dateTimePicker1.TabIndex = 6;
             // 
-            // rad1
+            // rad3
             // 
-            this.rad1.AutoSize = true;
-            this.rad1.Location = new System.Drawing.Point(6, 25);
-            this.rad1.Name = "rad1";
-            this.rad1.Size = new System.Drawing.Size(129, 24);
-            this.rad1.TabIndex = 2;
-            this.rad1.TabStop = true;
-            this.rad1.Text = "Theo Khoảng";
-            this.rad1.UseVisualStyleBackColor = true;
-            this.rad1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // rad2
-            // 
-            this.rad2.AutoSize = true;
-            this.rad2.Location = new System.Drawing.Point(274, 24);
-            this.rad2.Name = "rad2";
-            this.rad2.Size = new System.Drawing.Size(119, 24);
-            this.rad2.TabIndex = 3;
-            this.rad2.TabStop = true;
-            this.rad2.Text = "Theo Tháng";
-            this.rad2.UseVisualStyleBackColor = true;
-            this.rad2.CheckedChanged += new System.EventHandler(this.cbThang_CheckedChanged);
+            this.rad3.AutoSize = true;
+            this.rad3.Location = new System.Drawing.Point(6, 61);
+            this.rad3.Name = "rad3";
+            this.rad3.Size = new System.Drawing.Size(125, 24);
+            this.rad3.TabIndex = 5;
+            this.rad3.TabStop = true;
+            this.rad3.Text = "Ngày Cụ Thể";
+            this.rad3.UseVisualStyleBackColor = true;
+            this.rad3.CheckedChanged += new System.EventHandler(this.cbCuThe_CheckedChanged);
             // 
             // cbThang
             // 
@@ -313,40 +309,55 @@
             this.cbThang.Size = new System.Drawing.Size(75, 28);
             this.cbThang.TabIndex = 4;
             // 
-            // rad3
+            // rad2
             // 
-            this.rad3.AutoSize = true;
-            this.rad3.Location = new System.Drawing.Point(6, 61);
-            this.rad3.Name = "rad3";
-            this.rad3.Size = new System.Drawing.Size(125, 24);
-            this.rad3.TabIndex = 5;
-            this.rad3.TabStop = true;
-            this.rad3.Text = "Ngày Cụ Thể";
-            this.rad3.UseVisualStyleBackColor = true;
-            this.rad3.CheckedChanged += new System.EventHandler(this.cbCuThe_CheckedChanged);
+            this.rad2.AutoSize = true;
+            this.rad2.Location = new System.Drawing.Point(274, 24);
+            this.rad2.Name = "rad2";
+            this.rad2.Size = new System.Drawing.Size(119, 24);
+            this.rad2.TabIndex = 3;
+            this.rad2.TabStop = true;
+            this.rad2.Text = "Theo Tháng";
+            this.rad2.UseVisualStyleBackColor = true;
+            this.rad2.CheckedChanged += new System.EventHandler(this.cbThang_CheckedChanged);
             // 
-            // dateTimePicker1
+            // rad1
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 26);
-            this.dateTimePicker1.TabIndex = 6;
+            this.rad1.AutoSize = true;
+            this.rad1.Location = new System.Drawing.Point(6, 25);
+            this.rad1.Name = "rad1";
+            this.rad1.Size = new System.Drawing.Size(129, 24);
+            this.rad1.TabIndex = 2;
+            this.rad1.TabStop = true;
+            this.rad1.Text = "Theo Khoảng";
+            this.rad1.UseVisualStyleBackColor = true;
+            this.rad1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // cbNam
+            // button4
             // 
-            this.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNam.Enabled = false;
-            this.cbNam.FormattingEnabled = true;
-            this.cbNam.Items.AddRange(new object[] {
-            "2023",
-            "2022",
-            "2021",
-            "2020"});
-            this.cbNam.Location = new System.Drawing.Point(478, 20);
-            this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(92, 28);
-            this.cbNam.TabIndex = 7;
+            this.button4.Location = new System.Drawing.Point(399, 54);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(171, 37);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Lọc Phiếu Nhập";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // cbTheoKhoang
+            // 
+            this.cbTheoKhoang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTheoKhoang.Enabled = false;
+            this.cbTheoKhoang.FormattingEnabled = true;
+            this.cbTheoKhoang.Items.AddRange(new object[] {
+            "1 Tháng ",
+            "3 Tháng",
+            "6 Tháng",
+            "1 Năm ",
+            "Tất Cả"});
+            this.cbTheoKhoang.Location = new System.Drawing.Point(137, 21);
+            this.cbTheoKhoang.Name = "cbTheoKhoang";
+            this.cbTheoKhoang.Size = new System.Drawing.Size(121, 28);
+            this.cbTheoKhoang.TabIndex = 0;
             // 
             // label3
             // 
@@ -375,10 +386,23 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Tìm Kiếm Theo Mã";
             // 
-            // FormXemPhieuNhap
+            // button5
+            // 
+            this.button5.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_reset_30;
+            this.button5.Location = new System.Drawing.Point(469, 43);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(145, 59);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Reset";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // formXemPhieuNhap
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1168, 616);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1131, 616);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -394,7 +418,7 @@
             this.Controls.Add(this.txtMaPhieu);
             this.Controls.Add(this.txtNhanVien);
             this.Controls.Add(this.lvPhieuNhap);
-            this.Name = "FormXemPhieuNhap";
+            this.Name = "formXemPhieuNhap";
             this.Text = "FormXemPhieuNhap";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -437,5 +461,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -36,6 +36,8 @@ namespace QuanLyShopBanGiay.GUI
             AutoID();
             loadBrand(cbFilterTH);
             loadCate(cbFilterDM);
+            cbTimKiem.SelectedIndex
+                 = 0;
         }
 
         public void LoadProduct()
@@ -504,6 +506,7 @@ namespace QuanLyShopBanGiay.GUI
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
             txtTenSP.Text = "";
+            txtTongCong.Text = "";
         }
 
 
@@ -587,6 +590,11 @@ namespace QuanLyShopBanGiay.GUI
         }
 
         private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
         {
             if (txtBrand.Text == "")
             {

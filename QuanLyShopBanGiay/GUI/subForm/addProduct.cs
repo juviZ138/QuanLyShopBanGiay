@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -185,7 +187,7 @@ namespace QuanLyShopBanGiay.GUI.subForm
             openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.tiff|All Files|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-               
+
                 // Lấy đường dẫn của ảnh đã chọn
                 string imagePath = openFileDialog1.FileName;
                 txtIMG.Text = imagePath;

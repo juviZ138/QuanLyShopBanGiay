@@ -399,7 +399,7 @@ namespace QuanLyShopBanGiay.GUI
         private void cbThang_CheckedChanged(object sender, EventArgs e)
         {
             cbTheoKhoang.Enabled = false;
-
+            dateTimePicker1.Enabled = false;
             cbThang.Enabled = true;
             cbNam.Enabled = true;
         }

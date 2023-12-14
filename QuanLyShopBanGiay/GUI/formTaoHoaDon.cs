@@ -5,6 +5,7 @@ using iText.Layout;
 using iText.Layout.Element;
 using QuanLyShopBanGiay.BUS;
 using QuanLyShopBanGiay.DTO;
+using QuanLyShopBanGiay.GUI.subForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,7 @@ namespace QuanLyShopBanGiay.GUI
             AutoID();
             loadBrand(cbFilterTH);
             loadCate(cbFilterDM);
+            cbTimKiem.SelectedIndex = 0;
         }
 
         public void LoadProduct()
@@ -447,6 +449,9 @@ namespace QuanLyShopBanGiay.GUI
                 return;
             }
 
+          
+
+
             HoaDon hd = new HoaDon();
             hd.MaHoaDon = txtMaHD.Text;
             hd.MaNhanVien = txtMaNV.Text;
@@ -457,6 +462,18 @@ namespace QuanLyShopBanGiay.GUI
             hd.status = 1;
 
             hoaDonBUS.AddHoaDon(hd);
+
+            KhachHang kh =  khachHangBUS.GetByID(hd.MaKhachHang);
+            if (chkBPoint.Checked)
+            {
+                kh.point = 0;
+            }
+
+            kh.point = kh.point + (int)(hd.TongCong/10000);
+            
+            kh.total += hd.TongCong;
+            khachHangBUS.UpdateKhachHang(kh, kh.MaKH);
+
 
             foreach (ListViewItem item in listView1.Items)
             {
@@ -476,14 +493,14 @@ namespace QuanLyShopBanGiay.GUI
             // Kiểm tra kết quả
             if (result2 == DialogResult.No)
             {
-                //ResetForm();
+                ResetForm();
                 return;
 
             }
             else
             {
                 printPDF(hd, chiTietBUS.GetCTHoaDon(txtMaHD.Text));
-                //ResetForm();
+                ResetForm();
             }
 
 
@@ -643,6 +660,69 @@ namespace QuanLyShopBanGiay.GUI
         private void txtBrand_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+            
+        }
+
+        void ResetForm()
+        {
+            LoadProduct();
+            loadSize();
+            AutoID();
+            cbTimKiem.SelectedIndex = 0;
+            listView1.Items.Clear();
+            lvSoLuong.Items.Clear();
+            txtMaSP.Text = "";
+            txtSoLuong.Text = "";
+            txtGiaBan.Text = "";
+            txtTenSP.Text = "";
+            txtTotal.Text = "Tổng Tiền";
+            txtThanhTien.Text = "Thành Tiền";
+            txtSDT.Text = "";
+            txtTenKH.Text = "";
+            txtMaKM.Text = "";
+            txtTenKM.Text = "";
+        }
+
+        private void chkBPoint_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtTenKH.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Khách hàng");
+                txtSDT.Focus();
+                return;
+
+            }
+
+
+            if (chkBPoint.Checked)
+            {
+                UpdateDiscount();
+                float c = float.Parse(txtThanhTien.Text) - float.Parse(txtPoint.Text) * 1000;
+                if (c <= 0)
+                    txtThanhTien.Text = "0";
+                else txtThanhTien.Text = c.ToString();
+                //txtPoint.Enabled = true;
+            }
+            else
+            {
+                //txtPoint.Enabled = false;
+                UpdateDiscount();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            addCustomer f = new addCustomer();
+            f.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
             if (txtBrand.Text == "")
             {
                 LoadProduct();
@@ -663,24 +743,6 @@ namespace QuanLyShopBanGiay.GUI
                 // Hiển thị dữ liệu lọc
                 LoadProduct(filteredItems);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
-
-        void ResetForm()
-        {
-            LoadProduct();
-            loadSize();
-            AutoID();
-            listView1.Items.Clear();
-            lvSoLuong.Items.Clear();
-            txtMaSP.Text = "";
-            txtSoLuong.Text = "";
-            txtGiaBan.Text = "";
-            txtTenSP.Text = "";
         }
     }
   

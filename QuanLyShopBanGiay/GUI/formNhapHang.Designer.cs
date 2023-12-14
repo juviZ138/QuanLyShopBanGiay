@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formNhapHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.cbTimKiem = new System.Windows.Forms.ComboBox();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -74,7 +76,6 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
@@ -85,6 +86,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.cbTimKiem);
             this.panel1.Controls.Add(this.txtBrand);
@@ -100,6 +102,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(653, 704);
             this.panel1.TabIndex = 0;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button8.Location = new System.Drawing.Point(490, 70);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(136, 45);
+            this.button8.TabIndex = 77;
+            this.button8.Text = "Tìm Kiếm";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 28);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tìm Kiếm";
             // 
             // cbTimKiem
             // 
@@ -120,7 +142,7 @@
             this.txtBrand.Location = new System.Drawing.Point(190, 70);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(414, 45);
+            this.txtBrand.Size = new System.Drawing.Size(296, 45);
             this.txtBrand.TabIndex = 58;
             this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
@@ -172,6 +194,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtSoLuong);
@@ -193,22 +216,28 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_cancel_48;
             this.button3.Location = new System.Drawing.Point(20, 217);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 51);
             this.button3.TabIndex = 21;
             this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_edit_30;
             this.button4.Location = new System.Drawing.Point(146, 217);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 51);
             this.button4.TabIndex = 21;
-            this.button4.Text = "Cập Nhật";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "Sửa";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtSoLuong
@@ -228,12 +257,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Image = global::QuanLyShopBanGiay.Properties.Resources.icons8_add_48;
             this.button2.Location = new System.Drawing.Point(271, 217);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 51);
             this.button2.TabIndex = 19;
             this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
@@ -303,7 +335,7 @@
             this.columnHeader1});
             this.lvSoLuong.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lvSoLuong.HideSelection = false;
-            this.lvSoLuong.Location = new System.Drawing.Point(467, 396);
+            this.lvSoLuong.Location = new System.Drawing.Point(464, 385);
             this.lvSoLuong.Name = "lvSoLuong";
             this.lvSoLuong.Size = new System.Drawing.Size(177, 265);
             this.lvSoLuong.TabIndex = 1;
@@ -355,32 +387,35 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(238, 7);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(107, 75);
             this.button7.TabIndex = 12;
             this.button7.Text = "Reset";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button6.Location = new System.Drawing.Point(125, 8);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 75);
             this.button6.TabIndex = 11;
             this.button6.Text = "Thêm Sản Phẩm Mới";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button5.Location = new System.Drawing.Point(22, 6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 77);
             this.button5.TabIndex = 10;
             this.button5.Text = "Quản Lý Size";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
@@ -430,6 +465,7 @@
             // 
             // txtNgayNhap
             // 
+            this.txtNgayNhap.Enabled = false;
             this.txtNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtNgayNhap.Location = new System.Drawing.Point(178, 170);
             this.txtNgayNhap.Name = "txtNgayNhap";
@@ -453,12 +489,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1.Location = new System.Drawing.Point(22, 574);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(320, 62);
             this.button1.TabIndex = 1;
             this.button1.Text = "Tạo Phiếu Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
@@ -514,15 +551,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 28);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Tìm Kiếm";
             // 
             // formNhapHang
             // 
@@ -595,5 +623,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button8;
     }
 }

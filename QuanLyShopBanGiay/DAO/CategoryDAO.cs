@@ -52,13 +52,13 @@ namespace QuanLyShopBanGiay.DAO
 
         public void Add(Category Category)
         {
-            string sql = $"INSERT INTO category VALUES('{Category.CategoryId}','{Category.CategoryName}','{Category.status}')";
+            string sql = $"INSERT INTO category VALUES('{Category.CategoryId}',N'{Category.CategoryName}','{Category.status}')";
             modify.Command(sql);
         }
 
         public void Edit(Category Category, string CategoryId)
         {
-            string sql = $"UPDATE category SET [id] = '{Category.CategoryId}' ,[name] = '{Category.CategoryName}',[status] = {Category.status}  WHERE id = '{CategoryId}'";
+            string sql = $"UPDATE category SET [id] = '{Category.CategoryId}' ,[name] = N'{Category.CategoryName}',[status] = {Category.status}  WHERE id = '{CategoryId}'";
             modify.Command(sql);
         }
 

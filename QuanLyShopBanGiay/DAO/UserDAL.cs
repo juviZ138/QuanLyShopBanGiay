@@ -114,12 +114,8 @@ namespace QuanLyShopBanGiay.DAO
             Boolean flag = false;
             try
             {
-                string query = "UPDATE dbo.tbl_user\r\n" +
-               "SET password = N'" + user.password + "',full_name = N'" + user.full_name + "',email = N'" + user.email + "',phone = N'" + user.phone + "'," +
-               "cccd = N'" + user.cccd + "',gender = N'" + user.gender + "',year_birth = N'" + user.year_birth + "',address = N'" + user.address + "'," +
-               "role_id = N'" + user.role_id + "' " + "isDeleted = N'" + user.isDeleted + "' " +
-               "\r\nWHERE user_id = '" + user.user_id + "';";
 
+                string query = $"UPDATE dbo.tbl_user SET [user_id] = '{user.user_id}' ,[password] = N'{user.password}',[full_name] = '{user.full_name}', [email] = '{user.email}', [phone] = '{user.phone}', [cccd] = '{user.cccd}', [gender] = '{user.gender}', [year_birth] = '{user.year_birth}', [address] = '{user.address}', [role_id] = {user.role_id}, [isDeleted] = {user.isDeleted} WHERE user_id = '{user.user_id}'";
 
                 using (SqlConnection sqlConnection = SqlConnectionData.Connect())
                 {

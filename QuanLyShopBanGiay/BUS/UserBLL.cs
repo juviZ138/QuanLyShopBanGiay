@@ -87,7 +87,6 @@ namespace QuanLyShopBanGiay.BUS
 
             UserDAL userDAL = new UserDAL();
             Boolean kt = userDAL.suaUser(user);
-
             if (kt)
             {
                 return kt;

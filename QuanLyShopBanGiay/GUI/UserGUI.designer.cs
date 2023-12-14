@@ -59,20 +59,10 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMatk
@@ -201,6 +191,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(228, 30);
             this.txtPass.TabIndex = 14;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtHoten
             // 
@@ -292,19 +283,20 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(796, 384);
+            this.txtTimkiem.Location = new System.Drawing.Point(750, 422);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(219, 30);
             this.txtTimkiem.TabIndex = 25;
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(1021, 371);
+            this.btnTimkiem.Location = new System.Drawing.Point(997, 395);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(110, 57);
             this.btnTimkiem.TabIndex = 27;
             this.btnTimkiem.Text = "Tìm";
             this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // btnThem
             // 
@@ -314,6 +306,7 @@
             this.btnThem.TabIndex = 28;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -323,6 +316,7 @@
             this.btnSua.TabIndex = 29;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -332,15 +326,17 @@
             this.btnXoa.TabIndex = 30;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(901, 214);
+            this.btnClear.Location = new System.Drawing.Point(901, 226);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(79, 31);
             this.btnClear.TabIndex = 31;
             this.btnClear.Text = "CLear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // pictureBoxShow
             // 
@@ -364,78 +360,23 @@
             this.pictureBoxHide.TabStop = false;
             this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
             // 
-            // listView1
+            // dataGridView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(95, 458);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1012, 214);
-            this.listView1.TabIndex = 34;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã Nhân Viên";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mật Khẩu";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Họ Tên";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Email";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Điện Thoại";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "CCCD";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Giới Tính";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Năm Sinh";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Địa Chỉ";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Chức Vụ";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Trạng Thái";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(53, 458);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1071, 150);
+            this.dataGridView1.TabIndex = 35;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // UserGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 944);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1203, 678);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBoxShow);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnXoa);
@@ -473,6 +414,7 @@
             this.Text = "UserGUI";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,17 +451,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.PictureBox pictureBoxHide;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

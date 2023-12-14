@@ -47,6 +47,8 @@ namespace QuanLyShopBanGiay.GUI
             return role;
         }
 
+    
+
         private List<string> getGioiTinh()
         {
             List<string> s = new List<string>() { "Nam", "Nữ" };
@@ -182,6 +184,15 @@ namespace QuanLyShopBanGiay.GUI
             string address = txtDiachi.Text;
             int ChucVu = comboBoxChucvu.SelectedIndex;
 
+            UserBLL userBUS = new UserBLL();
+
+            Users ex = userBUS.getListUser().Find(i => i.user_id == txtMatk.Text);
+
+            if (ex != null)
+            {
+                MessageBox.Show("Trùng mã nhân viên");
+                return;
+            }
 
             if (full_name.Trim() == "") { MessageBox.Show("Vui lòng nhập Họ Và Tên "); }
             else if (year_birth == null) { MessageBox.Show("Vui lòng chọn ngày sinh "); }
@@ -213,7 +224,7 @@ namespace QuanLyShopBanGiay.GUI
                     trangThaiTaiKhoan = 1;
                 }
                 Users getma = new Users();
-                string mauser = getma.getMa();
+                //string mauser = getma.getMa();
                 Users nv = new Users(txtMatk.Text, txtPass.Text, txtHoten.Text, txtEmail.Text, txtSdt.Text, txtCCCD.Text, comboBoxGioitinh.SelectedItem.ToString(), txtNamsinh.Text, txtDiachi.Text, maChucVu, trangThaiTaiKhoan);
 
 

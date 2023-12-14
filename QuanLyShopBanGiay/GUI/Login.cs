@@ -84,9 +84,9 @@ namespace QuanLyShopBanGiay.GUI
                     this.Hide();
                     //Form1 form1 = new Form1();
                     formMain form1 = new formMain();
-/*                    Form1.phanquyen(NhanVien);
-                    Form1.setNhanVien(NhanVien);
-                    Form1.StartPosition = FormStartPosition.CenterScreen;*/
+                    form1.phanquyen(user);
+                    form1.setNhanVien(user);
+                    form1.StartPosition = FormStartPosition.CenterScreen;
                     form1.ShowDialog();
                     this.Close();
                 }

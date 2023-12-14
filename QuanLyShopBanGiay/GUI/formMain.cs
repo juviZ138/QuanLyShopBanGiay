@@ -1,4 +1,6 @@
-﻿using QuanLyShopBanGiay.GUI.subForm;
+﻿using QuanLyShopBanGiay.BUS;
+using QuanLyShopBanGiay.DTO;
+using QuanLyShopBanGiay.GUI.subForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +15,8 @@ namespace QuanLyShopBanGiay.GUI
 {
     public partial class formMain : Form
     {
-
-        private Form activeForm = null;
+        public static Users user = null;
+        private Form activeForm = null; 
 
         private void openChildForm(Form childForm)
         {
@@ -31,6 +33,60 @@ namespace QuanLyShopBanGiay.GUI
             panel2.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        public void setNhanVien(Users nv)
+        {
+            if (nv != null)
+            {
+                user = nv;
+            }
+
+        }
+
+        public void phanquyen(Users nhanVien)
+        {
+            Permission items = new Permission();
+            PermissionBLL quyenBLL = new PermissionBLL();
+            items = quyenBLL.GetItemPermission(nhanVien.role_id);
+
+            if (items.isSale != 1)
+            {
+                btnSale.Hide();
+            }
+
+            if (items.isBill != 1)
+            {
+                btnHD.Hide();
+            }
+
+            if (items.isPromo != 1)
+            {
+                btnKM.Hide();
+            }
+
+            if (items.isProduct != 1)
+            {
+                btnProduct.Hide();
+            }
+
+            if (items.isPermission != 1)
+            {
+                btnPermission.Hide();
+                btnTK.Hide();
+            }
+            
+            if(items.isReceive != 1)
+            {
+                btnNH.Hide();
+            }
+
+            if (items.isCustomer != 1)
+            {
+                btnKH.Hide();
+            }
+
+
         }
 
 
@@ -101,5 +157,7 @@ namespace QuanLyShopBanGiay.GUI
             f.MdiParent = formMain.ActiveForm;
             openChildForm(f);
         }
+
+
     }
 }

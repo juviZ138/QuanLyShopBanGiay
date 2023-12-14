@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKM = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnPermission = new System.Windows.Forms.Button();
+            this.btnNH = new System.Windows.Forms.Button();
+            this.btnHD = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
+            this.btnKH = new System.Windows.Forms.Button();
+            this.btnTK = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -45,14 +45,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnKM);
+            this.panel1.Controls.Add(this.btnProduct);
+            this.panel1.Controls.Add(this.btnPermission);
+            this.panel1.Controls.Add(this.btnNH);
+            this.panel1.Controls.Add(this.btnHD);
+            this.panel1.Controls.Add(this.btnSale);
+            this.panel1.Controls.Add(this.btnKH);
+            this.panel1.Controls.Add(this.btnTK);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -60,117 +60,117 @@
             this.panel1.Size = new System.Drawing.Size(217, 1024);
             this.panel1.TabIndex = 0;
             // 
-            // button8
+            // btnKM
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(0, 890);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(217, 100);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Khuyến Mãi";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnKM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKM.FlatAppearance.BorderSize = 0;
+            this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKM.Location = new System.Drawing.Point(0, 890);
+            this.btnKM.Name = "btnKM";
+            this.btnKM.Size = new System.Drawing.Size(217, 100);
+            this.btnKM.TabIndex = 8;
+            this.btnKM.Text = "Khuyến Mãi";
+            this.btnKM.UseVisualStyleBackColor = false;
+            this.btnKM.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // btnProduct
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(0, 790);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(217, 100);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Sản Phẩm";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Location = new System.Drawing.Point(0, 790);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(217, 100);
+            this.btnProduct.TabIndex = 7;
+            this.btnProduct.Text = "Sản Phẩm";
+            this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnPermission
             // 
-            this.button6.BackColor = System.Drawing.Color.Yellow;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 690);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(217, 100);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Quyền";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnPermission.BackColor = System.Drawing.Color.Yellow;
+            this.btnPermission.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPermission.FlatAppearance.BorderSize = 0;
+            this.btnPermission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermission.Location = new System.Drawing.Point(0, 690);
+            this.btnPermission.Name = "btnPermission";
+            this.btnPermission.Size = new System.Drawing.Size(217, 100);
+            this.btnPermission.TabIndex = 6;
+            this.btnPermission.Text = "Quyền";
+            this.btnPermission.UseVisualStyleBackColor = false;
+            this.btnPermission.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btnNH
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(0, 590);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(217, 100);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Nhập Hàng";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNH.FlatAppearance.BorderSize = 0;
+            this.btnNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNH.Location = new System.Drawing.Point(0, 590);
+            this.btnNH.Name = "btnNH";
+            this.btnNH.Size = new System.Drawing.Size(217, 100);
+            this.btnNH.TabIndex = 5;
+            this.btnNH.Text = "Nhập Hàng";
+            this.btnNH.UseVisualStyleBackColor = false;
+            this.btnNH.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnHD
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 490);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 100);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hóa Đơn";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHD.FlatAppearance.BorderSize = 0;
+            this.btnHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHD.Location = new System.Drawing.Point(0, 490);
+            this.btnHD.Name = "btnHD";
+            this.btnHD.Size = new System.Drawing.Size(217, 100);
+            this.btnHD.TabIndex = 4;
+            this.btnHD.Text = "Hóa Đơn";
+            this.btnHD.UseVisualStyleBackColor = false;
+            this.btnHD.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnSale
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 390);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 100);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Bán Hàng";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Location = new System.Drawing.Point(0, 390);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Size = new System.Drawing.Size(217, 100);
+            this.btnSale.TabIndex = 3;
+            this.btnSale.Text = "Bán Hàng";
+            this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnKH
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 290);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 100);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Khách Hàng";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKH.FlatAppearance.BorderSize = 0;
+            this.btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKH.Location = new System.Drawing.Point(0, 290);
+            this.btnKH.Name = "btnKH";
+            this.btnKH.Size = new System.Drawing.Size(217, 100);
+            this.btnKH.TabIndex = 2;
+            this.btnKH.Text = "Khách Hàng";
+            this.btnKH.UseVisualStyleBackColor = false;
+            this.btnKH.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnTK
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 100);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tài Khoản";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTK.FlatAppearance.BorderSize = 0;
+            this.btnTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTK.Location = new System.Drawing.Point(0, 190);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Size = new System.Drawing.Size(217, 100);
+            this.btnTK.TabIndex = 1;
+            this.btnTK.Text = "Tài Khoản";
+            this.btnTK.UseVisualStyleBackColor = false;
+            this.btnTK.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -210,15 +210,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPermission;
+        private System.Windows.Forms.Button btnNH;
+        private System.Windows.Forms.Button btnHD;
+        private System.Windows.Forms.Button btnSale;
+        private System.Windows.Forms.Button btnKH;
+        private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnKM;
+        private System.Windows.Forms.Button btnProduct;
     }
 }

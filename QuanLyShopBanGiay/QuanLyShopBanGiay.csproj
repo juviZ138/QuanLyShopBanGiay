@@ -189,27 +189,36 @@
     <Compile Include="BUS\CategoryBUS.cs" />
     <Compile Include="BUS\CTHoaDonBUS.cs" />
     <Compile Include="BUS\CTPhieuNhapBUS.cs" />
+    <Compile Include="BUS\DangNhapBLL.cs" />
     <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\KhuyenMaiBUS.cs" />
+    <Compile Include="BUS\PermissionBLL.cs" />
     <Compile Include="BUS\PhieuNhapBUS.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
+    <Compile Include="BUS\RoleBLL.cs" />
     <Compile Include="BUS\SizeBUS.cs" />
     <Compile Include="BUS\SoLuongBUS.cs" />
+    <Compile Include="BUS\UserBLL.cs" />
     <Compile Include="DAO\BrandDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\ConnectData.cs" />
     <Compile Include="DAO\ConnectDatabase.cs" />
     <Compile Include="DAO\CTHoaDonDAO.cs" />
     <Compile Include="DAO\CTPhieuNhapDAO.cs" />
+    <Compile Include="DAO\DangNhapDAL.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\KhuyenMaiDAO.cs" />
     <Compile Include="DAO\Modify.cs" />
+    <Compile Include="DAO\PermissionDAL.cs" />
     <Compile Include="DAO\PhieuNhapDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\ProductSizeDAO.cs" />
+    <Compile Include="DAO\RoleDAL.cs" />
     <Compile Include="DAO\SizeDAO.cs" />
     <Compile Include="DAO\SoLuongDAO.cs" />
+    <Compile Include="DAO\UserDAL.cs" />
     <Compile Include="DTO\Brand.cs" />
     <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\CTHoaDon.cs" />
@@ -217,10 +226,13 @@
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\KhuyenMai.cs" />
+    <Compile Include="DTO\Permission.cs" />
     <Compile Include="DTO\PhieuNhap.cs" />
     <Compile Include="DTO\Product.cs" />
+    <Compile Include="DTO\Role.cs" />
     <Compile Include="DTO\SoLuong.cs" />
     <Compile Include="DTO\SizeProduct.cs" />
+    <Compile Include="DTO\Users.cs" />
     <Compile Include="GUI\formTaoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     <Compile Include="GUI\ListItem.Designer.cs">
       <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\subForm\addCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +322,12 @@
     </Compile>
     <Compile Include="GUI\subForm\addProduct.Designer.cs">
       <DependentUpon>addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UserGUI.designer.cs">
+      <DependentUpon>UserGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -340,6 +364,9 @@
     <EmbeddedResource Include="GUI\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\subForm\addCustomer.resx">
       <DependentUpon>addCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +376,10 @@
     <EmbeddedResource Include="GUI\subForm\addProduct.resx">
       <DependentUpon>addProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserGUI.resx">
+      <DependentUpon>UserGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -359,6 +390,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserGUI.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

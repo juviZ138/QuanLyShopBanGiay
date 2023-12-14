@@ -57,7 +57,6 @@ namespace QuanLyShopBanGiay.GUI
                     item.setThuongHieu(nameBrand);
                     item.setGiaNhap(product.GiaNhap.ToString());
                     item.setGiaBan(product.GiaBan.ToString());
-                    item.setKM((product.GiaBan - product.GiaBan * product.KhuyenMai / 100).ToString());
                     item.LoadIMG(product.img_url);
 
                     item.ControlClicked += MyUserControl_ControlClicked;
@@ -87,7 +86,6 @@ namespace QuanLyShopBanGiay.GUI
                     item.setThuongHieu(nameBrand);
                     item.setGiaNhap(product.GiaNhap.ToString());
                     item.setGiaBan(product.GiaBan.ToString());
-                    item.setKM((product.GiaBan - product.GiaBan * product.KhuyenMai / 100).ToString());
                     item.LoadIMG(product.img_url);
 
                     item.ControlClicked += MyUserControl_ControlClicked;

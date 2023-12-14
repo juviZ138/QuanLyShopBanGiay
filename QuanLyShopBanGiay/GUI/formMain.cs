@@ -88,7 +88,9 @@ namespace QuanLyShopBanGiay.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            UserGUI f = new UserGUI();
+            f.MdiParent = formMain.ActiveForm;
+            openChildForm(f);
         }
     }
 }

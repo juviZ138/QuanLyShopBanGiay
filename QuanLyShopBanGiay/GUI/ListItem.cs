@@ -37,7 +37,9 @@ namespace QuanLyShopBanGiay.GUI
         }
         public void setKM(string str)
         {
-           // lbKM.Text = str;
+           lbKM.Visible = true;
+            txtKM.Visible = true;
+            txtKM.Text = str;
         }
 
         public void setCate (string str)
@@ -89,6 +91,11 @@ namespace QuanLyShopBanGiay.GUI
         private void ListItem_Click(object sender, EventArgs e)
         {
             ControlClicked?.Invoke(this,lbMaSP.Text) ;
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

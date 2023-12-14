@@ -35,6 +35,8 @@
             this.lbGiaBan = new System.Windows.Forms.Label();
             this.lbThuongHieu = new System.Windows.Forms.Label();
             this.lbCate = new System.Windows.Forms.Label();
+            this.lbKM = new System.Windows.Forms.Label();
+            this.txtKM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.lbTenSP.AutoSize = true;
             this.lbTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenSP.ForeColor = System.Drawing.Color.Red;
-            this.lbTenSP.Location = new System.Drawing.Point(142, 19);
+            this.lbTenSP.Location = new System.Drawing.Point(160, 10);
             this.lbTenSP.Name = "lbTenSP";
             this.lbTenSP.Size = new System.Drawing.Size(156, 25);
             this.lbTenSP.TabIndex = 1;
@@ -64,7 +66,7 @@
             // lbMaSP
             // 
             this.lbMaSP.AutoSize = true;
-            this.lbMaSP.Location = new System.Drawing.Point(143, 53);
+            this.lbMaSP.Location = new System.Drawing.Point(143, 35);
             this.lbMaSP.Name = "lbMaSP";
             this.lbMaSP.Size = new System.Drawing.Size(109, 20);
             this.lbMaSP.TabIndex = 2;
@@ -75,7 +77,7 @@
             // 
             this.lbGiaNhap.AutoSize = true;
             this.lbGiaNhap.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lbGiaNhap.Location = new System.Drawing.Point(143, 124);
+            this.lbGiaNhap.Location = new System.Drawing.Point(143, 95);
             this.lbGiaNhap.Name = "lbGiaNhap";
             this.lbGiaNhap.Size = new System.Drawing.Size(76, 20);
             this.lbGiaNhap.TabIndex = 3;
@@ -85,7 +87,7 @@
             // 
             this.lbGiaBan.AutoSize = true;
             this.lbGiaBan.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbGiaBan.Location = new System.Drawing.Point(231, 124);
+            this.lbGiaBan.Location = new System.Drawing.Point(257, 95);
             this.lbGiaBan.Name = "lbGiaBan";
             this.lbGiaBan.Size = new System.Drawing.Size(67, 20);
             this.lbGiaBan.TabIndex = 4;
@@ -94,7 +96,7 @@
             // lbThuongHieu
             // 
             this.lbThuongHieu.AutoSize = true;
-            this.lbThuongHieu.Location = new System.Drawing.Point(231, 85);
+            this.lbThuongHieu.Location = new System.Drawing.Point(257, 65);
             this.lbThuongHieu.Name = "lbThuongHieu";
             this.lbThuongHieu.Size = new System.Drawing.Size(52, 20);
             this.lbThuongHieu.TabIndex = 5;
@@ -103,17 +105,43 @@
             // lbCate
             // 
             this.lbCate.AutoSize = true;
-            this.lbCate.Location = new System.Drawing.Point(143, 85);
+            this.lbCate.Location = new System.Drawing.Point(143, 65);
             this.lbCate.Name = "lbCate";
             this.lbCate.Size = new System.Drawing.Size(43, 20);
             this.lbCate.TabIndex = 6;
             this.lbCate.Text = "Cate";
+            // 
+            // lbKM
+            // 
+            this.lbKM.AutoSize = true;
+            this.lbKM.ForeColor = System.Drawing.Color.Red;
+            this.lbKM.Location = new System.Drawing.Point(143, 125);
+            this.lbKM.Name = "lbKM";
+            this.lbKM.Size = new System.Drawing.Size(120, 20);
+            this.lbKM.TabIndex = 7;
+            this.lbKM.Text = "Giá Khuyến Mãi";
+            this.lbKM.Visible = false;
+            this.lbKM.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // txtKM
+            // 
+            this.txtKM.AutoSize = true;
+            this.txtKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKM.ForeColor = System.Drawing.Color.Red;
+            this.txtKM.Location = new System.Drawing.Point(172, 154);
+            this.txtKM.Name = "txtKM";
+            this.txtKM.Size = new System.Drawing.Size(152, 25);
+            this.txtKM.TabIndex = 8;
+            this.txtKM.Text = "Giá Khuyến Mãi";
+            this.txtKM.Visible = false;
             // 
             // ListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtKM);
+            this.Controls.Add(this.lbKM);
             this.Controls.Add(this.lbCate);
             this.Controls.Add(this.lbThuongHieu);
             this.Controls.Add(this.lbGiaBan);
@@ -142,5 +170,7 @@
         private System.Windows.Forms.Label lbGiaBan;
         private System.Windows.Forms.Label lbThuongHieu;
         private System.Windows.Forms.Label lbCate;
+        private System.Windows.Forms.Label lbKM;
+        private System.Windows.Forms.Label txtKM;
     }
 }

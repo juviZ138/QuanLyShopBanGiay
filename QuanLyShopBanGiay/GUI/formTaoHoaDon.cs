@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyShopBanGiay.GUI
 {
@@ -24,6 +25,7 @@ namespace QuanLyShopBanGiay.GUI
         {
             InitializeComponent();
             LoadProduct();
+            loadSize();
         }
 
         public void LoadProduct()
@@ -97,6 +99,7 @@ namespace QuanLyShopBanGiay.GUI
 
             Product currentProduct = productBUS.GetByID(ProductID);
 
+            txtMaSP.Text = currentProduct.ProductId;
             txtTenSP.Text = currentProduct.ProductName;
             txtGiaBan.Text = currentProduct.GiaBan.ToString();
 
@@ -143,7 +146,83 @@ namespace QuanLyShopBanGiay.GUI
 
         }
 
+        private void loadSize()
+        {
+            SizeBUS categoryBUS = new SizeBUS();
+
+            cbSize.DataSource = categoryBUS.GetAllSize().DefaultView;
+            cbSize.DisplayMember = "name";
+            cbSize.ValueMember = "id";
+            cbSize.SelectedIndex = 0;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count > 0)
+            {
+
+                foreach (ListViewItem ex in listView1.Items)
+                {
+                    if (ex.SubItems[0].Text == txtMaSP.Text && ex.SubItems[1].Text == cbSize.SelectedValue.ToString())
+                    {
+                        MessageBox.Show("Đã có trong phiếu Nhập");
+                        return;
+                    }
+                }
+
+            }
+
+            if (txtSoLuong.Value <= 0)
+            {
+                MessageBox.Show("Số Lượng Phải Lớn Hơn 0");
+                txtSoLuong.Focus();
+                return;
+            }
+
+            SoLuong sl = new SoLuong();
+            sl.MaSP = txtMaSP.Text;
+            sl.MaSize = cbSize.SelectedValue.ToString();
+            sl.soLuong = int.Parse(txtSoLuong.Value.ToString());
+
+            SoLuong check = soLuongBUS.GetSoLuong(sl.MaSP).Find(i => (i.MaSP == sl.MaSP) && (i.MaSize == sl.MaSize));
+
+            if (check == null)
+            {
+                MessageBox.Show("Sản Phẩm này ko có Size Này");
+                return;
+            }
+            
+            if(soLuongBUS.checkSoLuong(check,sl.soLuong) == 0)
+            {
+                MessageBox.Show("Vượt quá số lượng có trong kho");
+                return;
+            }
+
+            ListViewItem item = new ListViewItem(txtMaSP.Text);
+            item.SubItems.Add(cbSize.SelectedValue.ToString());
+            item.SubItems.Add(txtSoLuong.Text);
+            item.SubItems.Add(txtGiaBan.Text);
+            item.SubItems.Add((int.Parse(txtSoLuong.Text.ToString()) * float.Parse(txtGiaBan.Text.ToString())).ToString());
+
+            listView1.Items.Add(item);
+
+            txtSoLuong.Value = 0;
+            updateTongCong();
+
+
+        }
+        public void updateTongCong()
+        {
+            int tong = 0;
+            foreach (ListViewItem item in listView1.Items)
+            {
+                tong += int.Parse(item.SubItems[4].Text);
+            }
+            txtTotal.Text = tong.ToString();
+        }
 
 
     }
+  
+
 }

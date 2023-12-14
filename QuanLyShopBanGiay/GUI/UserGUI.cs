@@ -107,6 +107,12 @@ namespace QuanLyShopBanGiay.GUI {
             pictureBoxShow.Show();
         }
 
-        
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                
+            }
+        }
     }
 }

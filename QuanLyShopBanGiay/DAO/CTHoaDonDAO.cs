@@ -38,7 +38,7 @@ namespace QuanLyShopBanGiay.DAO
                     MaHoaDon = row["bill_id"].ToString(),
                     MaSP = row["product_id"].ToString(),
                     MaSize = row["size_id"].ToString(),
-                    soLuong = int.Parse(row["quantiy"].ToString()),
+                    soLuong = int.Parse(row["quantity"].ToString()),
                     GiaBan = float.Parse(row["price"].ToString()),
 
                 };

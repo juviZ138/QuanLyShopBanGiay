@@ -74,6 +74,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.cbTimKiem);
             this.panel1.Controls.Add(this.txtBrand);
             this.panel1.Controls.Add(this.checkBox2);
@@ -94,9 +96,9 @@
             this.panel1.Controls.Add(this.lvSoLuong);
             this.panel1.Controls.Add(this.panelProduct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(372, 0);
+            this.panel1.Location = new System.Drawing.Point(373, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 704);
+            this.panel1.Size = new System.Drawing.Size(653, 704);
             this.panel1.TabIndex = 0;
             // 
             // cbTimKiem
@@ -326,7 +328,7 @@
             this.panelProduct.Location = new System.Drawing.Point(18, 133);
             this.panelProduct.Name = "panelProduct";
             this.panelProduct.Padding = new System.Windows.Forms.Padding(5);
-            this.panelProduct.Size = new System.Drawing.Size(633, 235);
+            this.panelProduct.Size = new System.Drawing.Size(632, 235);
             this.panelProduct.TabIndex = 0;
             // 
             // panel2
@@ -513,6 +515,15 @@
             this.printPreviewDialog1.Visible = false;
             this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 28);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tìm Kiếm";
+            // 
             // formNhapHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -583,5 +594,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label9;
     }
 }

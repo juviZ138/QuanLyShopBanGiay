@@ -233,6 +233,12 @@
     <Compile Include="DTO\SoLuong.cs" />
     <Compile Include="DTO\SizeProduct.cs" />
     <Compile Include="DTO\Users.cs" />
+    <Compile Include="GUI\formPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formPermission.Designer.cs">
+      <DependentUpon>formPermission.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\formTaoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\formPermission.resx">
+      <DependentUpon>formPermission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\formTaoHoaDon.resx">
       <DependentUpon>formTaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,7 +390,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>

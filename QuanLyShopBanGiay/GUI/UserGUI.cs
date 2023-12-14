@@ -88,6 +88,7 @@ namespace QuanLyShopBanGiay.GUI
             pictureBoxShow.Show();
         }
 
+<<<<<<< HEAD
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int a;
@@ -283,5 +284,14 @@ namespace QuanLyShopBanGiay.GUI
 
             dataGridView1.DataSource = nhanVienBLL.getListTimKiem(stringtimkiem);
         }
+=======
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                
+            }
+        }
+>>>>>>> 7ae2400a3693c341e5ada4eccbdb023c6dbf2e8d
     }
 }

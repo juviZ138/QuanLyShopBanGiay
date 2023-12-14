@@ -274,10 +274,11 @@ namespace QuanLyShopBanGiay.GUI
             if(listView1.SelectedItems.Count > 0)
             {
                 listView1.Items.RemoveAt(listView1.SelectedIndices.Count - 1);
+                MessageBox.Show("Xóa thành công");
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn dòng cần sửa");
+                MessageBox.Show("Vui lòng chọn dòng cần xóa");
             }
 
             updateTongCong();

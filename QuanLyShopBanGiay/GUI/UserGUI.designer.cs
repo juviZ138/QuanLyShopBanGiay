@@ -362,7 +362,6 @@
             // 
             // dataGridView1
             // 
-<<<<<<< HEAD
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(53, 458);
             this.dataGridView1.Name = "dataGridView1";
@@ -371,73 +370,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1071, 150);
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-=======
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(95, 458);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1012, 214);
-            this.listView1.TabIndex = 34;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã Nhân Viên";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mật Khẩu";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Họ Tên";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Email";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Điện Thoại";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "CCCD";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Giới Tính";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Năm Sinh";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Địa Chỉ";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Chức Vụ";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Trạng Thái";
->>>>>>> 7ae2400a3693c341e5ada4eccbdb023c6dbf2e8d
             // 
             // UserGUI
             // 

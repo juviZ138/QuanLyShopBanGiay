@@ -7,7 +7,7 @@ using QuanLyShopBanGiay.DAO;
 using QuanLyShopBanGiay.DTO;
 
 
-namespace Shoes_Management.BUS
+namespace QuanLyShopBanGiay.BUS
 {
     public class PermissionBLL
     {

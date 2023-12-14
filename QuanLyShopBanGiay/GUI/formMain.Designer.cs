@@ -66,7 +66,7 @@
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(0, 790);
+            this.button8.Location = new System.Drawing.Point(0, 890);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(217, 100);
             this.button8.TabIndex = 8;
@@ -80,7 +80,7 @@
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(0, 690);
+            this.button7.Location = new System.Drawing.Point(0, 790);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(217, 100);
             this.button7.TabIndex = 7;
@@ -91,15 +91,16 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Yellow;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 924);
+            this.button6.Location = new System.Drawing.Point(0, 690);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(217, 100);
             this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
+            this.button6.Text = "Quyền";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -189,14 +190,14 @@
             this.panel2.Size = new System.Drawing.Size(1681, 1024);
             this.panel2.TabIndex = 1;
             // 
-            // frmMain
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmMain";
+            this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

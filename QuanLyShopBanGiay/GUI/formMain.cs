@@ -92,5 +92,12 @@ namespace QuanLyShopBanGiay.GUI
             f.MdiParent = formMain.ActiveForm;
             openChildForm(f);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            formPermission f = new formPermission();
+            f.MdiParent = formMain.ActiveForm;
+            openChildForm(f);
+        }
     }
 }

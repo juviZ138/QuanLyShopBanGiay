@@ -7,7 +7,7 @@ using QuanLyShopBanGiay.DAO;
 using QuanLyShopBanGiay.DTO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
-namespace Shoes_Management.BUS
+namespace QuanLyShopBanGiay.BUS
 {
     public class RoleBLL
     {

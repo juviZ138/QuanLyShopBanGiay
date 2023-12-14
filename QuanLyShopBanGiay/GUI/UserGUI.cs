@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data;
-using Shoes_Management.BUS;
 using QuanLyShopBanGiay.BUS;
 using QuanLyShopBanGiay.DTO;
 
@@ -169,6 +168,7 @@ namespace QuanLyShopBanGiay.GUI
             {
                 MessageBox.Show("Sửa Thành công");
                 Load1();
+                clear();
             }
             else
             {
@@ -229,6 +229,7 @@ namespace QuanLyShopBanGiay.GUI
                 {
                     MessageBox.Show("Thêm Thành công");
                     Load1();
+                    clear();
                 }
                 else
                 {
@@ -253,6 +254,7 @@ namespace QuanLyShopBanGiay.GUI
                 {
                     MessageBox.Show("Xóa Thành Công");
                     Load1();
+                    clear();
                 }
                 else
                 {
@@ -261,6 +263,20 @@ namespace QuanLyShopBanGiay.GUI
             }
         }
 
+        private void clear()
+        {
+            txtMatk.Text = null;
+            txtHoten.Text = null;
+            comboBoxGioitinh.SelectedItem = 1;
+            txtEmail.Text = null;
+            txtCCCD.Text = null;
+            txtNamsinh.Text = null;
+            txtDiachi.Text = null;
+            txtSdt.Text = null;
+            txtPass.Text = null;
+            comboBoxChucvu.SelectedIndex = 0;
+            radioTrangThai.Checked = false;
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtMatk.Text = null;

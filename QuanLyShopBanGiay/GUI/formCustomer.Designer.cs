@@ -79,7 +79,7 @@
             this.groupBox1.Size = new System.Drawing.Size(506, 293);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Thông Tin Khách Hàng";
             // 
             // label5
             // 
@@ -186,7 +186,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(24, 343);
+            this.listView1.Location = new System.Drawing.Point(24, 334);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -204,7 +204,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên Khách Hàng";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 200;
             // 
             // columnHeader3
             // 
@@ -214,12 +214,12 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Tổng Chi Tiêu";
-            this.columnHeader4.Width = 100;
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Điểm Thưởng";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 150;
             // 
             // groupBox2
             // 
@@ -233,7 +233,7 @@
             this.groupBox2.Size = new System.Drawing.Size(615, 141);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Chức Năng";
             // 
             // button3
             // 
@@ -282,7 +282,7 @@
             this.groupBox3.Size = new System.Drawing.Size(615, 144);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Tìm Kiếm";
             // 
             // rad2
             // 
@@ -348,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1550, 903);
+            this.ClientSize = new System.Drawing.Size(1198, 903);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listView1);

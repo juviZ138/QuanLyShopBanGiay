@@ -9,6 +9,7 @@ using QuanLyShopBanGiay.DTO;
 
 namespace QuanLyShopBanGiay.BUS
 {
+
     public class PermissionBLL
     {
         public static List<Permission> listPermission = null;

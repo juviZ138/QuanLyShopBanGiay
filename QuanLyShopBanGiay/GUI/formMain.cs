@@ -61,7 +61,9 @@ namespace QuanLyShopBanGiay.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-          
+            formXemHoaDon f = new formXemHoaDon();
+            f.MdiParent = formMain.ActiveForm;
+            openChildForm(f);
         }
 
         private void button5_Click(object sender, EventArgs e)

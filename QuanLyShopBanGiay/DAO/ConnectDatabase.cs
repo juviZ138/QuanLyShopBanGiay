@@ -11,6 +11,7 @@ namespace QuanLyShopBanGiay.DAO
     {
         public static SqlConnection getConnection()
         {
+            //string strcon = @"Data Source=DESKTOP-ERSM0MT\tam1;Initial Catalog=QLBanGIay2;Integrated Security=True";
             string strcon = @"Data Source=HIEUD;Initial Catalog=abc;Integrated Security=True";
             SqlConnection conn = new SqlConnection(strcon);
             try

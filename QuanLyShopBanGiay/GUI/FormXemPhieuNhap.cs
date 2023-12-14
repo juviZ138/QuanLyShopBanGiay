@@ -430,5 +430,14 @@ namespace QuanLyShopBanGiay.GUI
             }
            
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoadPhieuNhap();
+            lvChiTiet.Items.Clear();
+            txtMaPhieu.Text = "";
+            txtNhanVien.Text = "";
+            txtTien.Text = "";
+        }
     }
 }

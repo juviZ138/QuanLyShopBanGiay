@@ -54,6 +54,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,7 +93,7 @@
             this.groupBox3.Controls.Add(this.cbSort);
             this.groupBox3.Controls.Add(this.txtTimKiem);
             this.groupBox3.Controls.Add(this.cbTimKiem);
-            this.groupBox3.Location = new System.Drawing.Point(513, 29);
+            this.groupBox3.Location = new System.Drawing.Point(514, 64);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -191,7 +192,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(513, 243);
+            this.listView1.Location = new System.Drawing.Point(514, 283);
             this.listView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -290,7 +291,7 @@
             this.groupBox1.Controls.Add(this.txtPhanTramGiam);
             this.groupBox1.Controls.Add(this.txtValue);
             this.groupBox1.Controls.Add(this.txtTenKM);
-            this.groupBox1.Location = new System.Drawing.Point(14, 243);
+            this.groupBox1.Location = new System.Drawing.Point(15, 283);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -318,7 +319,7 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(14, 24);
+            this.groupBox2.Location = new System.Drawing.Point(15, 64);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -339,12 +340,25 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(340, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(501, 38);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Quản Lý Chương Trình Khuyến Mãi";
+            // 
             // formKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1155, 562);
+            this.ClientSize = new System.Drawing.Size(1136, 592);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listView1);
@@ -359,6 +373,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -390,5 +405,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RadioButton rad1;
         private System.Windows.Forms.ComboBox cbSort;
+        private System.Windows.Forms.Label label5;
     }
 }

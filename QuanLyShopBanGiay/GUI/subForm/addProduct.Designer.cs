@@ -67,7 +67,7 @@
             this.btnPicture.Margin = new System.Windows.Forms.Padding(4);
             this.btnPicture.Name = "btnPicture";
             this.btnPicture.Size = new System.Drawing.Size(204, 37);
-            this.btnPicture.TabIndex = 15;
+            this.btnPicture.TabIndex = 7;
             this.btnPicture.Text = "Chọn Ảnh";
             this.btnPicture.UseVisualStyleBackColor = true;
             this.btnPicture.Click += new System.EventHandler(this.btnPicture_Click);
@@ -80,7 +80,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(272, 76);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Thêm Mới";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -129,7 +129,7 @@
             this.cbCate.Margin = new System.Windows.Forms.Padding(4);
             this.cbCate.Name = "cbCate";
             this.cbCate.Size = new System.Drawing.Size(157, 33);
-            this.cbCate.TabIndex = 4;
+            this.cbCate.TabIndex = 2;
             this.cbCate.SelectedIndexChanged += new System.EventHandler(this.cbCate_SelectedIndexChanged);
             // 
             // label3
@@ -150,7 +150,7 @@
             this.cbBrand.Margin = new System.Windows.Forms.Padding(4);
             this.cbBrand.Name = "cbBrand";
             this.cbBrand.Size = new System.Drawing.Size(157, 33);
-            this.cbBrand.TabIndex = 6;
+            this.cbBrand.TabIndex = 3;
             // 
             // label4
             // 
@@ -179,7 +179,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(157, 30);
-            this.txtTenSP.TabIndex = 18;
+            this.txtTenSP.TabIndex = 1;
             // 
             // txtGiaNhap
             // 
@@ -188,7 +188,7 @@
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(157, 30);
-            this.txtGiaNhap.TabIndex = 19;
+            this.txtGiaNhap.TabIndex = 4;
             this.txtGiaNhap.TextChanged += new System.EventHandler(this.txtGiaNhap_TextChanged);
             // 
             // txtLoiNhuan
@@ -198,7 +198,7 @@
             this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtLoiNhuan.Name = "txtLoiNhuan";
             this.txtLoiNhuan.Size = new System.Drawing.Size(157, 30);
-            this.txtLoiNhuan.TabIndex = 20;
+            this.txtLoiNhuan.TabIndex = 5;
             this.txtLoiNhuan.TextChanged += new System.EventHandler(this.txtLoiNhuan_TextChanged);
             // 
             // txtKM
@@ -208,7 +208,7 @@
             this.txtKM.Margin = new System.Windows.Forms.Padding(4);
             this.txtKM.Name = "txtKM";
             this.txtKM.Size = new System.Drawing.Size(157, 30);
-            this.txtKM.TabIndex = 21;
+            this.txtKM.TabIndex = 6;
             this.txtKM.TextChanged += new System.EventHandler(this.txtKM_TextChanged);
             // 
             // label5
@@ -328,10 +328,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(728, 40);
+            this.button5.Location = new System.Drawing.Point(714, 40);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 45);
-            this.button5.TabIndex = 35;
+            this.button5.Size = new System.Drawing.Size(204, 45);
+            this.button5.TabIndex = 10;
             this.button5.Text = "Reset";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -344,7 +344,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(272, 76);
-            this.button1.TabIndex = 29;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Hủy Bỏ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -353,6 +353,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pictureBox1.InitialImage = global::QuanLyShopBanGiay.Properties.Resources._1034957_200;
             this.pictureBox1.Location = new System.Drawing.Point(714, 103);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);

@@ -396,6 +396,7 @@
             this.button5.Text = "Reset";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // formXemPhieuNhap
             // 

@@ -690,5 +690,15 @@ namespace QuanLyShopBanGiay.GUI
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            viewProduct();
+            loadBrand(cbThuongHieu); loadBrand(cbFilterTH);
+            loadCate(cbDanhMuc); loadCate(cbFilterDM);
+            cbTimKiem.SelectedIndex = 0;
+            cbSapXep.SelectedIndex = 0;
+            cbFilter.SelectedIndex = 0;
+        }
     }
 }

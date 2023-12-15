@@ -521,9 +521,14 @@ namespace QuanLyShopBanGiay.GUI
             {
                 FilterDM = ListProduct.FindAll(item => item.BrandId == cbFilterTH.SelectedValue.ToString());
             }
-            else
+            else if (checkBox1.Checked && checkBox2.Checked)
             {
                 FilterDM = ListProduct.FindAll(item => item.CategoryId == cbFilterDM.SelectedValue.ToString() && item.BrandId == cbFilterTH.SelectedValue.ToString());
+            }
+            else
+            {
+                viewProduct();
+                return;
             }
       
             

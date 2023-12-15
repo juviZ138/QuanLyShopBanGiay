@@ -26,7 +26,6 @@ namespace QuanLyShopBanGiay.GUI
         {
             InitializeComponent();
             rad1.Checked = true;
-            cbTheoKhoang.SelectedIndex = 0;
             cbThang.SelectedIndex = 0;
             cbNam.SelectedIndex = 0;
             //List<HoaDon> listHD = HoaDonBUS.GetHoaDon();
@@ -57,50 +56,46 @@ namespace QuanLyShopBanGiay.GUI
 
         public void LoadHoaDon()
         {
-            List<HoaDon> listHD = HoaDonBUS.GetHoaDon();
-            List<PhieuNhap> listPN = PhieuNhapBUS.GetPhieuNhap();
+            
 
             if (rad1.Checked)
             {
-                if (cbTheoKhoang.SelectedIndex == 0)
+                List<HoaDon> listHD = HoaDonBUS.GetHoaDon();
+                List<PhieuNhap> listPN = PhieuNhapBUS.GetPhieuNhap();
+                listHD = listHD.Where(i => i.date == dateTimePicker1.Value.Date).ToList();
+                listPN = listPN.Where(i => i.date == dateTimePicker1.Value.Date).ToList();
+
+                if(listHD.Count <= 0)
                 {
-                    listHD = getHoaDon(listHD, DateTime.Now.AddDays(-1), DateTime.Now);
-                    listPN = getPhieuNhap(listPN, DateTime.Now.AddDays(-1), DateTime.Now);
+                    MessageBox.Show("Tháng này không có hóa đơn");
+                }
+                if(listPN.Count <= 0)
+                {
+                    MessageBox.Show("Tháng này không có phiếu nhập");
+
                 }
 
-                if (cbTheoKhoang.SelectedIndex == 1)
-                {
-                    listHD = getHoaDon(listHD, DateTime.Now.AddDays(-7), DateTime.Now);
-                    listPN = getPhieuNhap(listPN, DateTime.Now.AddDays(-7), DateTime.Now);
-
-                }
-
-                if (cbTheoKhoang.SelectedIndex == 2)
-                {
-                    listPN = getPhieuNhap(listPN, DateTime.Now.AddMonths(-1), DateTime.Now);
-                    listHD = getHoaDon(listHD, DateTime.Now.AddMonths(-1), DateTime.Now);
-                }
-
-                if (cbTheoKhoang.SelectedIndex == 3)
-                {
-                    listHD = getHoaDon(listHD, DateTime.Now.AddMonths(-6), DateTime.Now);
-                    listPN = getPhieuNhap(listPN, DateTime.Now.AddMonths(-6), DateTime.Now);
-                }
-           
-                if (cbTheoKhoang.SelectedIndex == 4)
-                {
-                    listHD = getHoaDon(listHD, DateTime.Now.AddYears(-1), DateTime.Now);
-                    listPN = getPhieuNhap(listPN, DateTime.Now.AddYears(-1), DateTime.Now);
-                }
                 ThongKe(listHD, listPN);
                 TopBanChay(listHD);
+                    
+              
             }
-            else
+            
+            if(rad2.Checked)
             {
-
+                List<HoaDon> listHD = HoaDonBUS.GetHoaDon();
+                List<PhieuNhap> listPN = PhieuNhapBUS.GetPhieuNhap();
                 listHD = listHD.Where(i => i.date.Month == int.Parse(cbThang.Text) && i.date.Year <= int.Parse(cbNam.Text)).ToList();
                 listPN = listPN.Where(i => i.date.Month == int.Parse(cbThang.Text) && i.date.Year <= int.Parse(cbNam.Text)).ToList();
+                if (listHD.Count <= 0)
+                {
+                    MessageBox.Show("Tháng này không có hóa đơn");
+                }
+                if (listPN.Count <= 0)
+                {
+                    MessageBox.Show("Tháng này không có phiếu nhập");
 
+                }
                 // Hiển thị kết quả
                 ThongKe(listHD, listPN);
                 TopBanChay(listHD);

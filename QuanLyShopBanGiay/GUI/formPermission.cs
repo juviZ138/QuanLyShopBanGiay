@@ -82,6 +82,12 @@ namespace QuanLyShopBanGiay.GUI
         //Them
         private void button1_Click(object sender, EventArgs e)
         {
+            if(txtMaquyen.Text =="" || txtTenquyen.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu");
+                return;
+            }
+            
             Permission quyenDTO = new Permission();
             quyenDTO.id = int.Parse(txtMaquyen.Text);
             PermissionBLL nhanVienBLL = new PermissionBLL();
@@ -179,6 +185,13 @@ namespace QuanLyShopBanGiay.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (txtMaquyen.Text == "" || txtTenquyen.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu");
+                return;
+            }
+
+
             Permission quyenDTO = new Permission();
             quyenDTO.id = int.Parse(txtMaquyen.Text);
             PermissionBLL nhanVienBLL = new PermissionBLL();
@@ -269,6 +282,14 @@ namespace QuanLyShopBanGiay.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (txtMaquyen.Text == "" || txtTenquyen.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu");
+                return;
+            }
+
+
+
             PermissionBLL quyenBLL = new PermissionBLL();
             
             int maquyen = int.Parse(txtMaquyen.Text);

@@ -88,7 +88,7 @@ namespace QuanLyShopBanGiay.GUI
                 ListViewItem listViewItem = lvHoaDon.SelectedItems[0];
                 txtMaPhieu.Text = listViewItem.SubItems[0].Text;
                 txtNhanVien.Text = listViewItem.SubItems[1].Text;
-                txtTien.Text = listViewItem.SubItems[4].Text;
+                txtTien.Text = listViewItem.SubItems[5].Text;
                 txtKH.Text = listViewItem.SubItems[2].Text;
                 LoadChiTiet();
             }

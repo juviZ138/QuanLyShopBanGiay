@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.rad1 = new System.Windows.Forms.RadioButton();
             this.cbNam = new System.Windows.Forms.ComboBox();
             this.cbThang = new System.Windows.Forms.ComboBox();
-            this.cbTheoKhoang = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -109,18 +109,18 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(31, 398);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.Blue;
-            series2.Legend = "Legend1";
-            series2.Name = "Sản Phẩm";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.Blue;
+            series1.Legend = "Legend1";
+            series1.Name = "Sản Phẩm";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1056, 242);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
@@ -138,7 +138,7 @@
             // txtProduct
             // 
             this.txtProduct.Location = new System.Drawing.Point(829, 216);
-            this.txtProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProduct.Margin = new System.Windows.Forms.Padding(4);
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(255, 34);
             this.txtProduct.TabIndex = 12;
@@ -146,7 +146,7 @@
             // txtDoanhThu
             // 
             this.txtDoanhThu.Location = new System.Drawing.Point(193, 219);
-            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoanhThu.Name = "txtDoanhThu";
             this.txtDoanhThu.Size = new System.Drawing.Size(252, 34);
             this.txtDoanhThu.TabIndex = 13;
@@ -154,7 +154,7 @@
             // txtKH
             // 
             this.txtKH.Location = new System.Drawing.Point(829, 258);
-            this.txtKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtKH.Name = "txtKH";
             this.txtKH.Size = new System.Drawing.Size(255, 34);
             this.txtKH.TabIndex = 13;
@@ -162,7 +162,7 @@
             // txtNhap
             // 
             this.txtNhap.Location = new System.Drawing.Point(829, 303);
-            this.txtNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhap.Name = "txtNhap";
             this.txtNhap.Size = new System.Drawing.Size(258, 34);
             this.txtNhap.TabIndex = 14;
@@ -170,7 +170,7 @@
             // txtChiTieu
             // 
             this.txtChiTieu.Location = new System.Drawing.Point(193, 261);
-            this.txtChiTieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChiTieu.Margin = new System.Windows.Forms.Padding(4);
             this.txtChiTieu.Name = "txtChiTieu";
             this.txtChiTieu.Size = new System.Drawing.Size(252, 34);
             this.txtChiTieu.TabIndex = 15;
@@ -178,7 +178,7 @@
             // txtLoiNhuan
             // 
             this.txtLoiNhuan.Location = new System.Drawing.Point(191, 306);
-            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtLoiNhuan.Name = "txtLoiNhuan";
             this.txtLoiNhuan.Size = new System.Drawing.Size(159, 34);
             this.txtLoiNhuan.TabIndex = 16;
@@ -207,12 +207,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.rad2);
             this.groupBox1.Controls.Add(this.rad1);
             this.groupBox1.Controls.Add(this.cbNam);
             this.groupBox1.Controls.Add(this.cbThang);
-            this.groupBox1.Controls.Add(this.cbTheoKhoang);
             this.groupBox1.Location = new System.Drawing.Point(28, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1056, 144);
@@ -294,20 +294,12 @@
             this.cbThang.Size = new System.Drawing.Size(147, 36);
             this.cbThang.TabIndex = 21;
             // 
-            // cbTheoKhoang
+            // dateTimePicker1
             // 
-            this.cbTheoKhoang.FormattingEnabled = true;
-            this.cbTheoKhoang.Items.AddRange(new object[] {
-            "1 Ngày",
-            "1 Tuần",
-            "1 Tháng",
-            "6 Tháng",
-            "1 Năm"});
-            this.cbTheoKhoang.Location = new System.Drawing.Point(179, 30);
-            this.cbTheoKhoang.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTheoKhoang.Name = "cbTheoKhoang";
-            this.cbTheoKhoang.Size = new System.Drawing.Size(349, 36);
-            this.cbTheoKhoang.TabIndex = 20;
+            this.dateTimePicker1.Location = new System.Drawing.Point(179, 34);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(349, 34);
+            this.dateTimePicker1.TabIndex = 21;
             // 
             // formThongKe
             // 
@@ -331,7 +323,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formThongKe";
             this.Text = "formThongKe";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -365,6 +357,6 @@
         private System.Windows.Forms.RadioButton rad1;
         private System.Windows.Forms.ComboBox cbNam;
         private System.Windows.Forms.ComboBox cbThang;
-        private System.Windows.Forms.ComboBox cbTheoKhoang;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

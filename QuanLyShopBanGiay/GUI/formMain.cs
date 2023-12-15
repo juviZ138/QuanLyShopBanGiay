@@ -126,6 +126,10 @@ namespace QuanLyShopBanGiay.GUI
         {
             IsMdiContainer = true;
             loadLable();
+            formThongKe f = new formThongKe();
+            f.MdiParent = formMain.ActiveForm;
+            openChildForm(f);
+
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -248,8 +248,8 @@ namespace QuanLyShopBanGiay.GUI
 
             ListViewItem item = new ListViewItem(txtMaSP.Text);
             item.SubItems.Add(cbSize.SelectedValue.ToString());
-            item.SubItems.Add(txtSoLuong.Text);
             item.SubItems.Add(txtGiaBan.Text);
+            item.SubItems.Add(txtSoLuong.Text);
             item.SubItems.Add((int.Parse(txtSoLuong.Text.ToString()) * float.Parse(txtGiaBan.Text.ToString())).ToString());
 
             listView1.Items.Add(item);
@@ -331,7 +331,7 @@ namespace QuanLyShopBanGiay.GUI
                 txtGiaBan.Text = product.GiaNhap.ToString();
 
                 cbSize.SelectedValue = item.SubItems[1].Text;
-                txtSoLuong.Value = int.Parse(item.SubItems[2].Text);
+                txtSoLuong.Value = int.Parse(item.SubItems[3].Text);
 
 
 
@@ -703,6 +703,12 @@ namespace QuanLyShopBanGiay.GUI
             if (chkBPoint.Checked)
             {
                 UpdateDiscount();
+                if(txtPoint.Text  == "0")
+                {
+                    MessageBox.Show("Không có điểm thưởng");
+                    chkBPoint.Checked = false;
+                    return;
+                }
                 float c = float.Parse(txtThanhTien.Text) - float.Parse(txtPoint.Text) * 1000;
                 if (c <= 0)
                     txtThanhTien.Text = "0";

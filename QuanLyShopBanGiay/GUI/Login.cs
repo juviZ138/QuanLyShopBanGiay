@@ -91,5 +91,44 @@ namespace QuanLyShopBanGiay.GUI
                 }
             }
         }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string tenTK = txtUser.Text;
+                string MatKhau = txtPass.Text;
+                if (tenTK.Trim() == "") { MessageBox.Show("Vui lòng nhập tên tài khoản "); }
+                else if (MatKhau.Trim() == "") { MessageBox.Show("Vui lòng nhập Mật Khẩu "); }
+
+                else
+                {
+                    DangNhapBLL dangNhapBLL = new DangNhapBLL();
+                    user = dangNhapBLL.getLogin(tenTK, MatKhau);
+                    if (user == null)
+                    {
+                        MessageBox.Show("Nhập sai tên tài khoản hoặc mật khẩu");
+
+                    }
+                    else
+                    {
+                        if (user.isDeleted == 0)
+                        {
+                            MessageBox.Show("Tài Khoản đã bị khóa ! Vui lòng liên hệ admin để mở ! ");
+                            return;
+                        }
+                        MessageBox.Show("đăng nhập thành công");
+                        this.Hide();
+                        //Form1 form1 = new Form1();
+                        formMain form1 = new formMain();
+                        form1.phanquyen(user);
+                        form1.setNhanVien(user);
+                        form1.StartPosition = FormStartPosition.CenterScreen;
+                        form1.ShowDialog();
+                        this.Close();
+                    }
+                }
+            }
+        }
     }
 }

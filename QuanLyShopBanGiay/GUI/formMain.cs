@@ -181,5 +181,19 @@ namespace QuanLyShopBanGiay.GUI
             f.MdiParent = formMain.ActiveForm;
             openChildForm(f);
         }
+
+        private void formMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Kiểm tra kết quả từ hộp thoại
+            if (result == DialogResult.Yes)
+            {
+            }             
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

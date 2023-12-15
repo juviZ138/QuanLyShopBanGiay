@@ -120,6 +120,7 @@ namespace QuanLyShopBanGiay.GUI
             cbSort.SelectedIndex = 0;
             cbTimKiem.SelectedIndex = 1;
             rad1.Checked = true;
+            listView2.Items.Clear();
 
             txtMaKH.Text = "";
             txtTenKH.Text = "";
